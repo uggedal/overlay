@@ -1,4 +1,4 @@
-USE="filecaps mmx sse sse2"
+USE="$USE filecaps mmx sse sse2"
 USE="$USE -cracklib -fortran -iconv -gdbm -nls"
 
 PYTHON_TARGETS="python3_4"
