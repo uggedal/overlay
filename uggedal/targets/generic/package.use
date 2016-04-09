@@ -1,0 +1,14 @@
+app-admin/sudo -sendmail
+app-admin/sysklogd logrotate
+app-shells/bash -net
+dev-libs/gmp -cxx
+dev-libs/libxslt -crypt
+dev-libs/openssl -tls-heartbeat
+dev-vcs/git -gpg -webdav -python
+net-misc/wget -pcre
+sys-apps/iproute2 -berkdb
+sys-apps/openrc -netifrc -newnet
+sys-apps/util-linux -cramfs -suid
+sys-boot/grub -fonts -themes
+sys-devel/gcc -sanitize
+sys-process/procps modern-top

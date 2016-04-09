@@ -1,0 +1,16 @@
+MAKEOPTS="--jobs=4 --load-average=4.0"
+EMERGE_DEFAULT_OPTS="--jobs=4 --load-average=4.0"
+GENTOO_MIRRORS="http://mirror.netcologne.de/gentoo/"
+
+USE="filecaps mmx sse sse2"
+USE="$USE -cracklib -fortran -iconv -gdbm -nls"
+
+PYTHON_TARGETS="python3_4"
+PYTHON_SINGLE_TARGET="python3_4"
+
+FEATURES="nodoc noinfo"
+
+INSTALL_MASK="
+	${INSTALL_MASK}
+	/usr/share/gtk-doc
+"
