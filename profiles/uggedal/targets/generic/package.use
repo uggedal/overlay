@@ -12,6 +12,3 @@ sys-apps/util-linux -cramfs -suid
 sys-boot/grub -fonts -themes
 sys-devel/gcc -sanitize
 sys-process/procps modern-top
-
-*/* PYTHON_TARGETS: -* python3_4
-*/* PYTHON_SINGLE_TARGET: -* python3_4
