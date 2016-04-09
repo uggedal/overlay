@@ -1,7 +1,3 @@
-MAKEOPTS="--jobs=4 --load-average=4.0"
-EMERGE_DEFAULT_OPTS="--jobs=4 --load-average=4.0"
-GENTOO_MIRRORS="http://mirror.netcologne.de/gentoo/"
-
 USE="filecaps mmx sse sse2"
 USE="$USE -cracklib -fortran -iconv -gdbm -nls"
 
