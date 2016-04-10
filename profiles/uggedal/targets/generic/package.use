@@ -9,7 +9,7 @@ dev-vcs/git -gpg -webdav -python
 net-misc/wget -pcre
 sys-apps/iproute2 -berkdb
 sys-apps/openrc -netifrc -newnet
-sys-apps/util-linux -cramfs -python -suid
+sys-apps/util-linux -cramfs -suid
 sys-boot/grub -fonts -themes
 sys-devel/gcc -sanitize
 sys-process/procps modern-top
