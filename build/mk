@@ -1,0 +1,134 @@
+#!/bin/sh -ex
+
+[ "$(id -u)" -eq 0 ] || { echo needs root; exit 1; }
+
+DIR=$(readlink -f $(dirname $0))
+
+MIRROR=mirror.netcologne.de/gentoo
+
+ROOTFS=$DIR/rootfs
+DISTDIR=$DIR/distfiles
+PKGDIR=$DIR/packages
+MOUNTS='dev proc sys usr/portage'
+
+rootfs() {
+	local p=-nomultilib
+	local a=amd64
+	local d=releases/$a/autobuilds
+
+	if ! [ -d $ROOTFS/etc ]; then
+		mkdir -p $ROOTFS
+		local t=$(curl -s http://$MIRROR/$d/latest-stage3-$a$p.txt |
+			awk 'END {print $1 }')
+		curl http://$MIRROR/$d/$t |
+			tar -C $ROOTFS -xjp --xattrs
+	fi
+
+	mkdir -p $DISTDIR $PKGDIR
+}
+
+mnt() {
+	local d
+
+	for d in $MOUNTS usr/local/portage; do
+		[ -d $ROOTFS/$d ] || mkdir -p $ROOTFS/$d
+	done
+
+	for d in $MOUNTS; do
+		grep -q $ROOTFS/$d /proc/mounts ||
+			mount -o rbind,ro /$d $ROOTFS/$d
+	done
+
+	grep -q $ROOTFS/usr/local/portage /proc/mounts ||
+		mount -o rbind $DIR $ROOTFS/usr/local/portage
+}
+
+conf() {
+	mkdir -p $ROOTFS/etc/portage/repos.conf
+	cat <<-EOF >$ROOTFS/etc/portage/repos.conf/uggedal.conf
+	[uggedal]
+	location = /usr/local/portage
+	masters = gentoo
+	auto-sync = no
+	EOF
+
+	cat <<-EOF >$ROOTFS/etc/portage/make.conf
+	MAKEOPTS="--jobs=4 --load-average=4.0"
+	EMERGE_DEFAULT_OPTS="--jobs=4 --load-average=4.0"
+	GENTOO_MIRRORS="http://$MIRROR/"
+	FEATURES="buildpkg"
+	DISTDIR="/$DISTDIR"
+	PKGDIR="/$PKGDIR"
+	EOF
+
+	rm -f $ROOTFS/etc/portage/make.profile
+	ln -s ../../usr/local/portage/profiles/uggedal/amd64/generic \
+		$ROOTFS/etc/portage/make.profile
+
+	cp /etc/resolv.conf $ROOTFS/etc/
+}
+
+world() {
+	cat <<-EOF >/var/lib/portage/world
+	app-admin/logrotate
+	app-admin/sudo
+	app-admin/sysklogd
+	app-editors/vim
+	app-shells/bash-completion
+	dev-vcs/git
+	net-misc/dhcpcd
+	sys-boot/grub:2
+	sys-process/dcron
+	EOF
+}
+
+prepare() {
+	chroot $ROOTFS /usr/bin/eselect news read --quiet all
+}
+
+emerge() {
+	local opts='
+		--color=n
+		--complete-graph=y
+		--keep-going=y
+		--quiet=y
+		--nospinner
+		--with-bdeps=y
+	'
+
+	if [ "$PRETEND" ]; then
+		opts="$opts -p"
+	fi
+
+	if [ "$FORCE" ]; then
+		chroot $ROOTFS /usr/bin/emerge $opts -e @world
+	else
+		chroot $ROOTFS /usr/bin/emerge $opts -uND @world
+	fi
+}
+
+cleanup() {
+	for d in $MOUNTS usr/local/portage; do
+		if grep -q $ROOTFS/$d /proc/mounts; then
+			umount -l  $ROOTFS/$d
+		fi
+	done
+}
+
+while getopts fp opt; do
+	case $opt in
+	f)
+		FORCE=y;;
+	esac
+done
+unset opt
+shift $((OPTIND - 1))
+
+trap cleanup INT TERM EXIT
+
+rootfs
+mnt
+conf
+world
+prepare
+emerge "$@"
