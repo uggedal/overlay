@@ -113,15 +113,10 @@ cleanup() {
 	done
 }
 
-while getopts f opt; do
-	case $opt in
-	f)
-		shift
-		FORCE=y
-		;;
-	esac
-done
-unset opt
+if [ "$1" = -f ]; then
+	FORCE=y
+	shift
+fi
 
 trap cleanup INT TERM EXIT
 
