@@ -1,0 +1,9 @@
+app-admin/logrotate
+app-admin/sudo
+app-admin/sysklogd
+app-editors/vim
+app-shells/bash-completion
+dev-vcs/git
+net-misc/dhcpcd
+sys-boot/grub:2
+sys-process/dcron

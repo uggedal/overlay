@@ -69,17 +69,7 @@ conf() {
 }
 
 world() {
-	cat <<-EOF >/var/lib/portage/world
-	app-admin/logrotate
-	app-admin/sudo
-	app-admin/sysklogd
-	app-editors/vim
-	app-shells/bash-completion
-	dev-vcs/git
-	net-misc/dhcpcd
-	sys-boot/grub:2
-	sys-process/dcron
-	EOF
+	cp $DIR/world $ROOTFS/var/lib/portage/world
 }
 
 prepare() {
