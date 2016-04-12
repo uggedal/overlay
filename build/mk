@@ -53,6 +53,7 @@ conf() {
 	EOF
 
 	cat <<-EOF >$ROOTFS/etc/portage/make.conf
+	USE=""
 	MAKEOPTS="--jobs=4 --load-average=4.0"
 	EMERGE_DEFAULT_OPTS="--jobs=4 --load-average=4.0"
 	GENTOO_MIRRORS="http://$MIRROR/"
