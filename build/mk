@@ -96,15 +96,13 @@ emerge() {
 		--with-bdeps=y
 	'
 
-	if [ "$PRETEND" ]; then
-		opts="$opts -p"
+	if [ "$FORCE" ]; then
+		opts="$opts -e"
+	else
+		opts="$opts -uND"
 	fi
 
-	if [ "$FORCE" ]; then
-		chroot $ROOTFS /usr/bin/emerge $opts -e @world
-	else
-		chroot $ROOTFS /usr/bin/emerge $opts -uND @world
-	fi
+	chroot $ROOTFS /usr/bin/emerge $opts "$@" @world
 }
 
 cleanup() {
@@ -115,14 +113,15 @@ cleanup() {
 	done
 }
 
-while getopts fp opt; do
+while getopts f opt; do
 	case $opt in
 	f)
-		FORCE=y;;
+		shift
+		FORCE=y
+		;;
 	esac
 done
 unset opt
-shift $((OPTIND - 1))
 
 trap cleanup INT TERM EXIT
 
