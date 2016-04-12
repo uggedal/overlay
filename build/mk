@@ -40,7 +40,7 @@ mnt() {
 	done
 
 	grep -q $ROOTFS/usr/local/portage /proc/mounts ||
-		mount -o rbind $DIR $ROOTFS/usr/local/portage
+		mount -o rbind $(readlink -f $DIR/..) $ROOTFS/usr/local/portage
 }
 
 conf() {
