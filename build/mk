@@ -1,4 +1,4 @@
-#!/bin/sh -ex
+#!/bin/sh -e
 
 [ "$(id -u)" -eq 0 ] || { echo needs root; exit 1; }
 
