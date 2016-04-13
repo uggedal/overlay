@@ -2,6 +2,7 @@ app-admin/sudo -sendmail
 app-admin/sysklogd logrotate
 app-arch/tar minimal
 app-shells/bash -net
+dev-lang/python:2.7 sqlite
 dev-libs/gmp -cxx
 dev-libs/libxslt -crypt
 dev-libs/openssl -tls-heartbeat
