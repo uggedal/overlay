@@ -79,13 +79,19 @@ prepare() {
 
 emerge() {
 	local opts='
-		--color=n
 		--complete-graph=y
 		--keep-going=y
-		--quiet=y
-		--nospinner
 		--with-bdeps=y
 	'
+
+	if ! [ -t 1 ]; then
+		opts="
+			$opts
+			--color=n
+			--nospinner
+			--quiet=y
+		"
+	fi
 
 	if [ "$FORCE" ]; then
 		opts="$opts -e"
