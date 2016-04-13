@@ -7,6 +7,7 @@ dev-libs/gmp -cxx
 dev-libs/libxslt -crypt
 dev-libs/openssl -tls-heartbeat
 dev-vcs/git -gpg -webdav -python
+media-libs/mesa -llvm
 net-misc/wget -pcre
 sys-apps/iproute2 -berkdb
 sys-apps/openrc -netifrc -newnet

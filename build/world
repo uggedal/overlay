@@ -7,3 +7,4 @@ dev-vcs/git
 net-misc/dhcpcd
 sys-boot/grub:2
 sys-process/dcron
+x11-base/xorg-server
