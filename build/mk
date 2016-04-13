@@ -97,6 +97,10 @@ emerge() {
 }
 
 cleanup() {
+	chroot $ROOTFS /usr/bin/emerge --depclean
+}
+
+umnt() {
 	for d in $MOUNTS usr/local/portage; do
 		if grep -q $ROOTFS/$d /proc/mounts; then
 			umount -l  $ROOTFS/$d
@@ -109,7 +113,7 @@ if [ "$1" = -f ]; then
 	shift
 fi
 
-trap cleanup INT TERM EXIT
+trap umnt INT TERM EXIT
 
 rootfs
 mnt
@@ -117,3 +121,4 @@ conf
 world
 prepare
 emerge "$@"
+cleanup
