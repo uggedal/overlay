@@ -97,6 +97,9 @@ emerge() {
 }
 
 cleanup() {
+	if [ "$NO_CLEANUP" ]; then
+		return
+	fi
 	chroot $ROOTFS /usr/bin/emerge --depclean
 }
 
