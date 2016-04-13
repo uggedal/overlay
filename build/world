@@ -7,4 +7,5 @@ dev-vcs/git
 net-misc/dhcpcd
 sys-boot/grub:2
 sys-process/dcron
+www-client/firefox
 x11-base/xorg-server

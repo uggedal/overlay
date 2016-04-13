@@ -6,7 +6,9 @@ dev-lang/python:2.7 sqlite
 dev-libs/gmp -cxx
 dev-libs/libxslt -crypt
 dev-libs/openssl -tls-heartbeat
+dev-util/cmake -ncurses
 dev-vcs/git -gpg -webdav -python
+media-libs/libpng apng
 media-libs/mesa -llvm
 net-misc/wget -pcre
 sys-apps/iproute2 -berkdb
@@ -15,3 +17,6 @@ sys-apps/util-linux -cramfs -suid
 sys-boot/grub -fonts -themes
 sys-devel/gcc -sanitize
 sys-process/procps modern-top
+x11-libs/cairo X
+x11-libs/gdk-pixbuf X
+x11-libs/pango X
