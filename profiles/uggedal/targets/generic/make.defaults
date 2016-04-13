@@ -1,6 +1,11 @@
 USE="$USE mmx sse sse2"
 USE="$USE filecaps"
-USE="$USE -cracklib -fortran -iconv -gdbm -nls"
+USE="$USE -cracklib"
+USE="$USE -fortran"
+USE="$USE -iconv"
+USE="$USE -introspection"
+USE="$USE -gdbm"
+USE="$USE -nls"
 
 USE="$USE -python_targets_python3_4"
 
