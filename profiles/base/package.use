@@ -6,6 +6,7 @@ dev-lang/python:2.7 sqlite
 dev-libs/gmp -cxx
 dev-libs/libxslt -crypt
 dev-libs/openssl -tls-heartbeat
+app-misc/tmux vim-syntax
 dev-util/cmake -ncurses
 dev-vcs/git -gpg -webdav -python
 media-fonts/terminus-font X

@@ -2,6 +2,7 @@ app-admin/logrotate
 app-admin/sudo
 app-admin/sysklogd
 app-editors/vim
+app-misc/tmux
 app-shells/bash-completion
 dev-vcs/git
 media-fonts/terminus-font
