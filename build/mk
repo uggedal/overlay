@@ -63,7 +63,7 @@ conf() {
 	EOF
 
 	rm -f $ROOTFS/etc/portage/make.profile
-	ln -s ../../usr/local/portage/profiles/uggedal/amd64/generic \
+	ln -s ../../usr/local/portage/profiles/amd64 \
 		$ROOTFS/etc/portage/make.profile
 
 	cp /etc/resolv.conf $ROOTFS/etc/
