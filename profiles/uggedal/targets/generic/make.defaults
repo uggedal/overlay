@@ -17,4 +17,4 @@ INSTALL_MASK="
 	/usr/share/gtk-doc
 "
 
-LINGUAS="en"
+LINGUAS=""
