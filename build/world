@@ -4,6 +4,7 @@ app-admin/sysklogd
 app-editors/vim
 app-shells/bash-completion
 dev-vcs/git
+media-fonts/terminus-font
 net-misc/dhcpcd
 sys-boot/grub:2
 sys-process/dcron

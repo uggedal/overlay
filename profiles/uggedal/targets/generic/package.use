@@ -8,6 +8,7 @@ dev-libs/libxslt -crypt
 dev-libs/openssl -tls-heartbeat
 dev-util/cmake -ncurses
 dev-vcs/git -gpg -webdav -python
+media-fonts/terminus-font X
 media-libs/libpng apng
 media-libs/mesa -llvm
 net-misc/wget -pcre
