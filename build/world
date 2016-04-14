@@ -11,4 +11,5 @@ sys-boot/grub:2
 sys-process/dcron
 www-client/firefox
 x11-base/xorg-server
+x11-misc/unclutter
 x11-terms/xterm
