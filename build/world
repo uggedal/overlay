@@ -7,6 +7,7 @@ app-shells/bash-completion
 dev-vcs/git
 media-fonts/terminus-font
 net-misc/dhcpcd
+net-p2p/transmission
 sys-boot/grub:2
 sys-process/dcron
 www-client/firefox
