@@ -11,9 +11,11 @@ app-misc/tmux vim-syntax
 dev-util/cmake -ncurses
 dev-vcs/git -gpg -webdav -python
 media-fonts/terminus-font X
+media-libs/libass -enca
 media-libs/libpng apng
 media-libs/mesa -llvm
 media-video/ffmpeg openssl
+media-video/mpv -enca -dvd -lua -luajit -xscreensaver
 net-misc/wget -pcre
 sys-apps/iproute2 -berkdb
 sys-apps/openrc -netifrc -newnet
@@ -23,4 +25,5 @@ sys-devel/gcc -sanitize
 sys-process/procps modern-top
 x11-libs/cairo X
 x11-libs/gdk-pixbuf X
+x11-libs/libva X
 x11-libs/pango X

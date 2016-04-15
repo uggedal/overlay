@@ -7,6 +7,7 @@ app-shells/bash-completion
 app-text/mupdf
 dev-vcs/git
 media-fonts/terminus-font
+media-video/mpv
 net-misc/dhcpcd
 net-misc/minidlna
 net-p2p/transmission
