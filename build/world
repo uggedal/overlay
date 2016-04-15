@@ -4,6 +4,7 @@ app-admin/sysklogd
 app-editors/vim
 app-misc/tmux
 app-shells/bash-completion
+app-text/mupdf
 dev-vcs/git
 media-fonts/terminus-font
 net-misc/dhcpcd
