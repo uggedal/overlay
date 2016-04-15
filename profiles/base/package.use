@@ -13,6 +13,7 @@ dev-vcs/git -gpg -webdav -python
 media-fonts/terminus-font X
 media-libs/libpng apng
 media-libs/mesa -llvm
+media-video/ffmpeg openssl
 net-misc/wget -pcre
 sys-apps/iproute2 -berkdb
 sys-apps/openrc -netifrc -newnet

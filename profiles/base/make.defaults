@@ -1,4 +1,5 @@
 USE="$USE mmx sse sse2"
+USE="$USE alsa"
 USE="$USE filecaps"
 USE="$USE -cracklib"
 USE="$USE -fortran"

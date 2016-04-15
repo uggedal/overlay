@@ -8,6 +8,7 @@ app-text/mupdf
 dev-vcs/git
 media-fonts/terminus-font
 net-misc/dhcpcd
+net-misc/minidlna
 net-p2p/transmission
 sys-boot/grub:2
 sys-process/dcron
