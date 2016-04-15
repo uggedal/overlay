@@ -1,6 +1,7 @@
 app-admin/logrotate
 app-admin/sudo
 app-admin/sysklogd
+app-arch/unrar
 app-editors/vim
 app-misc/tmux
 app-shells/bash-completion
