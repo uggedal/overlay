@@ -18,3 +18,4 @@ www-client/firefox
 x11-base/xorg-server
 x11-misc/unclutter
 x11-terms/xterm
+x11-wm/i3

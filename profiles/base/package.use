@@ -23,7 +23,9 @@ sys-apps/util-linux -cramfs -suid
 sys-boot/grub -fonts -themes
 sys-devel/gcc -sanitize
 sys-process/procps modern-top
-x11-libs/cairo X
+x11-libs/cairo xcb X
 x11-libs/gdk-pixbuf X
 x11-libs/libva X
+x11-libs/libxcb xkb
+x11-libs/libxkbcommon X
 x11-libs/pango X
