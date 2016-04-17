@@ -1,4 +1,4 @@
 USE="$USE vaapi"
 
-VIDEO_CARDS="-* intel i965"
+VIDEO_CARDS="-* intel i965 nv"
 INPUT_DEVICES="-* evdev"
