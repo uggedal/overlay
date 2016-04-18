@@ -67,10 +67,11 @@ conf() {
 		$ROOTFS/etc/portage/make.profile
 
 	cp /etc/resolv.conf $ROOTFS/etc/
-}
 
-world() {
 	cp $DIR/world $ROOTFS/var/lib/portage/world
+
+	rm -rf $ROOTFS/etc/portage/savedconfig
+	cp -r $DIR/savedconfig $ROOTFS/etc/portage
 }
 
 prepare() {
@@ -127,7 +128,6 @@ trap umnt INT TERM EXIT
 rootfs
 mnt
 conf
-world
 prepare
 emerge "$@"
 cleanup
