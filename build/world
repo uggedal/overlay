@@ -8,6 +8,7 @@ app-shells/bash-completion
 app-text/mupdf
 dev-vcs/git
 media-fonts/terminus-font
+media-sound/alsa-utils
 media-video/mpv
 net-misc/dhcpcd
 net-misc/minidlna
