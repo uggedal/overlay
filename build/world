@@ -11,6 +11,7 @@ media-fonts/terminus-font
 media-video/mpv
 net-misc/dhcpcd
 net-misc/minidlna
+net-misc/openntpd
 net-p2p/transmission
 sys-boot/grub:2
 sys-kernel/linux-firmware
