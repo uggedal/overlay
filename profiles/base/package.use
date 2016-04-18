@@ -22,6 +22,7 @@ sys-apps/openrc -netifrc -newnet
 sys-apps/util-linux -cramfs -suid
 sys-boot/grub -fonts -themes
 sys-devel/gcc -sanitize
+sys-kernel/linux-firmware savedconfig
 sys-process/procps modern-top
 x11-libs/cairo xcb X
 x11-libs/gdk-pixbuf X
