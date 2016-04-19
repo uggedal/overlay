@@ -19,6 +19,7 @@ sys-boot/grub:2
 sys-kernel/linux-firmware
 sys-process/dcron
 www-client/firefox
+www-servers/nginx
 x11-base/xorg-server
 x11-misc/unclutter
 x11-terms/xterm

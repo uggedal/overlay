@@ -19,3 +19,5 @@ INSTALL_MASK="
 "
 
 LINGUAS=""
+
+NGINX_MODULES_HTTP="-* autoindex gzip"

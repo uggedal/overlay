@@ -26,6 +26,7 @@ sys-boot/grub -fonts -themes
 sys-devel/gcc -sanitize
 sys-kernel/linux-firmware savedconfig
 sys-process/procps modern-top
+www-servers/nginx -http-cache vim-syntax
 x11-libs/cairo xcb X
 x11-libs/gdk-pixbuf X
 x11-libs/libva X
