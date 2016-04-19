@@ -1,4 +1,5 @@
 app-admin/logrotate
+app-admin/pass
 app-admin/sudo
 app-admin/sysklogd
 app-arch/unrar

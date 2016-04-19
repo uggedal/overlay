@@ -1,3 +1,4 @@
+app-admin/pass X
 app-admin/sudo -sendmail
 app-admin/sysklogd logrotate
 app-arch/tar minimal
