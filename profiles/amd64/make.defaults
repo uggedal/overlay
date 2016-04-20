@@ -2,3 +2,5 @@ USE="$USE vaapi"
 
 VIDEO_CARDS="-* intel i965"
 INPUT_DEVICES="-* evdev"
+
+GRUB_PLATFORMS="efi-64"
