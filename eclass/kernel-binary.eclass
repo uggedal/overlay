@@ -9,6 +9,9 @@ SRC_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.x/${MY_P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 
+DEPEND="dev-lang/perl
+	sys-devel/bc"
+
 S="${WORKDIR}"/${MY_P}
 
 EXPORT_FUNCTIONS src_configure src_compile src_install pkg_postinst pkg_postrm
