@@ -16,6 +16,7 @@ net-misc/minidlna
 net-misc/openntpd
 net-p2p/transmission
 sys-boot/grub:2
+sys-fs/mdadm
 sys-kernel/linux-firmware
 sys-process/dcron
 www-client/firefox
