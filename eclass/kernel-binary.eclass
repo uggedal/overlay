@@ -11,7 +11,7 @@ SLOT="0"
 
 S="${WORKDIR}"/${MY_P}
 
-EXPORT_FUNCTIONS src_configure src_compile src_install
+EXPORT_FUNCTIONS src_configure src_compile src_install pkg_postinst pkg_postrm
 
 K_KERNELBIN_BASE_CONFIG="
 	# Base:
@@ -70,7 +70,25 @@ kernel-binary_src_compile() {
 }
 
 kernel-binary_src_install() {
+	dodir /boot
 	emake modules_install install \
-		INSTALL_MOD_PATH="${D}" \
-		INSTALL_PATH="${D}"/boot
+		INSTALL_MOD_PATH="${ED}" \
+		INSTALL_PATH="${ED}"/boot
+}
+
+kernel-binary_grub2_mkconfig() {
+	local mkcfg= "${ROOT}"/usr/sbin/grub2-mkconfig
+	if [ -x "${mkcfg}" ]; then
+		"${mkcfg}" -o /boot/grub/grub.cfg
+	else
+		ewarn "Unable to find ${mkcfg}"
+	fi
+}
+
+kernel-binary_pkg_postinst() {
+	kernel-binary_grub2_mkconfig
+}
+
+kernel-binary_pkg_postrm() {
+	kernel-binary_grub2_mkconfig
 }
