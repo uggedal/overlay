@@ -80,7 +80,7 @@ kernel-binary_src_install() {
 }
 
 kernel-binary_grub2_mkconfig() {
-	local mkcfg="${ROOT}"/usr/sbin/grub2-mkconfig
+	local mkcfg="${ROOT}"usr/sbin/grub2-mkconfig
 	if [ -x "${mkcfg}" ]; then
 		"${mkcfg}" -o /boot/grub/grub.cfg
 	else
