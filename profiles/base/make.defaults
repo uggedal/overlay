@@ -1,23 +1,13 @@
-USE="$USE mmx sse sse2"
-USE="$USE alsa"
 USE="$USE filecaps"
 USE="$USE -cracklib"
 USE="$USE -fortran"
-USE="$USE -iconv"
-USE="$USE -introspection"
-USE="$USE -gdbm"
 USE="$USE -nls"
-
-USE="$USE -python_targets_python3_4"
 
 FEATURES="nodoc noinfo"
 
 INSTALL_MASK="
 	${INSTALL_MASK}
-	/usr/lib/systemd
-	/usr/share/gtk-doc
+	/etc/conf.d
+	/etc/inid.d
+	/etc/xinit.d
 "
-
-LINGUAS=""
-
-NGINX_MODULES_HTTP="-* autoindex gzip"
