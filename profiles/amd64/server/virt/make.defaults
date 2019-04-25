@@ -1,1 +1,1 @@
-GRUB_PLATFORMS="pc"
+GRUB_PLATFORMS="-* pc"
