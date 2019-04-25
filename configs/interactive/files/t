@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if tmux has-session; then
+	exec tmux -f /etc/tmux.local.conf attach -d
+else
+	exec tmux -f /etc/tmux.local.conf
+fi
