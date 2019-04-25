@@ -8,9 +8,11 @@ S="${WORKDIR}"
 
 RDEPEND="
 	configs/base
+
 	app-editors/vim
 	app-misc/tmux
 	app-shells/bash-completion
+	sys-fs/ncdu
 "
 
 src_install() {
