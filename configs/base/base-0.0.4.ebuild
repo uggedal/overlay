@@ -15,4 +15,7 @@ src_install() {
 
 	insinto /etc/bash/bashrc.d
 	doins "${FILESDIR}"/local.sh
+
+	insinto /etc
+	doins "${FILESDIR}"/input.local.rc
 }
