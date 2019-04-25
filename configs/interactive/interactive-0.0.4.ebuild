@@ -17,6 +17,5 @@ src_install() {
 	insinto /etc
 	doins "${FILESDIR}"/tmux.local.conf
 
-	exeinto /usr/local/bin
-	doexe "${FILESDIR}"/t
+	dobin "${FILESDIR}"/t
 }
