@@ -1,3 +1,4 @@
+app-crypt/gnupg -smartcard
 app-misc/tmux vim-syntax
 app-shells/bash -net
 dev-libs/elfutils -utils
