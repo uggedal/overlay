@@ -1,1 +1,12 @@
-# Put individual package USE flags here
+app-shells/bash -net
+dev-libs/elfutils -utils
+dev-vcs/git -python -webdav
+dev-util/cmake -ncurses
+net-misc/iputils -arping
+net-misc/openssh libedit
+sys-apps/iproute2 -berkdb -iptables
+sys-apps/kmod -tools
+sys-apps/net-tools -arp
+sys-apps/systemd -kmod
+sys-apps/util-linux static-libs -cramfs -suid
+sys-fs/btrfs-progs -convert -zstd
