@@ -4,6 +4,8 @@ DESCRIPTION="Deps and config for development environment"
 SLOT="1"
 KEYWORDS="amd64"
 
+S="${WORKDIR}"
+
 RDEPEND="
 	configs/interactive
 	app-shells/fzy
