@@ -5,10 +5,13 @@ SLOT="1"
 KEYWORDS="amd64"
 
 RDEPEND="
-	app-editors/vim
-	app-misc/tmux
-	app-shells/bash-completion
+	configs/interactive
 	app-shells/fzy
 	dev-vcs/git
 	sys-apps/the_silver_searcher
 "
+
+src_install() {
+	exeinto /usr/local/bin
+	doexe "${FILESDIR}"/f
+}
