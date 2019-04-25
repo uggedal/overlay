@@ -7,6 +7,7 @@ KEYWORDS="amd64"
 S="${WORKDIR}"
 
 RDEPEND="
+	configs/base
 	app-editors/vim
 	app-misc/tmux
 	app-shells/bash-completion
