@@ -12,4 +12,7 @@ RDEPEND="
 
 src_install() {
 	doenvd "${FILESDIR}"/99local-base
+
+	insinto /etc/bash/bashrc.d
+	doins "${FILESDIR}"/local.sh
 }
