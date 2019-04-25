@@ -14,6 +14,5 @@ RDEPEND="
 "
 
 src_install() {
-	exeinto /usr/local/bin
-	doexe "${FILESDIR}"/f
+	dobin "${FILESDIR}"/f
 }
