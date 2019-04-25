@@ -9,6 +9,7 @@ S="${WORKDIR}"
 RDEPEND="
 	configs/interactive
 	app-shells/fzy
+	app-vim/vimwiki
 	dev-vcs/git
 	sys-apps/the_silver_searcher
 "
