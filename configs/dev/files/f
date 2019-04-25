@@ -6,9 +6,9 @@
 if command -v ag >/dev/null; then
 	if [ "$1" = -v ]; then
 		shift
-		exec ag -S --hidden -g '!.git' "$@"
+		exec ag -S --hidden --ignore .git "$@"
 	else
-		exec ag -S --hidden -g '!.git' -l "$@"
+		exec ag -S --hidden --ignore .git -l "$@"
 	fi
 
 fi
