@@ -9,3 +9,7 @@ S="${WORKDIR}"
 RDEPEND="
 	app-portage/gentoolkit
 "
+
+src_install() {
+	doenvd 99local-base
+}
