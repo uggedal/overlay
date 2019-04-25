@@ -11,5 +11,5 @@ RDEPEND="
 "
 
 src_install() {
-	doenvd 99local-base
+	doenvd "${FILESDIR}"/99local-base
 }
