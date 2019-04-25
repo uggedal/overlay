@@ -17,5 +17,5 @@ src_install() {
 	doins "${FILESDIR}"/tmux.local.conf
 
 	exeinto /usr/local/bin
-	doexe "${FILESDIR}"/f
+	doexe "${FILESDIR}"/t
 }
