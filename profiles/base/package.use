@@ -1,3 +1,4 @@
+app-misc/tmux vim-syntax
 app-shells/bash -net
 dev-libs/elfutils -utils
 dev-vcs/git -python -webdav
