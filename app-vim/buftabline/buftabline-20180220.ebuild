@@ -1,4 +1,4 @@
-EAPI=7
+EAPI=6
 
 inherit vim-plugin vcs-snapshot
 
