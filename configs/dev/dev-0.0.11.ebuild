@@ -1,10 +1,10 @@
 EAPI=7
 
 DESCRIPTION="Deps and config for development environment"
-SLOT="1"
-KEYWORDS="amd64"
 
-S="${WORKDIR}"
+LICENSE="CC0-1.0"
+SLOT="0"
+KEYWORDS="amd64"
 
 RDEPEND="
 	configs/interactive
@@ -14,6 +14,8 @@ RDEPEND="
 	dev-vcs/git
 	sys-apps/the_silver_searcher
 "
+
+S="${WORKDIR}"
 
 src_install() {
 	doenvd "${FILESDIR}"/99local-dev
