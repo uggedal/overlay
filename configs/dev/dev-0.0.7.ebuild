@@ -15,7 +15,7 @@ RDEPEND="
 "
 
 src_install() {
-	insinto /usr/share/vim
+	insinto /etc/vim
 	doins "${FILESDIR}"/vimrc
 
 	dobin "${FILESDIR}"/f
