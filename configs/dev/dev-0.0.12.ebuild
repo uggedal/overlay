@@ -26,5 +26,5 @@ src_install() {
 	doins "${FILESDIR}"/vim.local.rc
 
 	dobin "${FILESDIR}"/f
-	dobin "${FILESDIR}"/w
+	dobin "${FILESDIR}"/vw
 }
