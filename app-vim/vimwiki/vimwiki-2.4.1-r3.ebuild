@@ -14,5 +14,5 @@ VIM_PLUGIN_HELPFILES="${PN}.txt"
 
 src_prepare() {
 	default
-	rm *.md || die
+	rm *.md doc/*.png || die
 }
