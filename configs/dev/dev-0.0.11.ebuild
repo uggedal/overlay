@@ -17,9 +17,10 @@ RDEPEND="
 src_install() {
 	doenvd "${FILESDIR}"/99local-dev
 
+	insinto /etc
+	doins "${FILESDIR}"/gitconfig
 	insinto /etc/vim
 	doins "${FILESDIR}"/vim.local.rc
-	doins "${FILESDIR}"/gitconfig
 
 	dobin "${FILESDIR}"/f
 }
