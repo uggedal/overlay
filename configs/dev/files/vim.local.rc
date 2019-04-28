@@ -179,7 +179,7 @@ nnoremap <leader>c :noh<CR>
 ""
 
 " colorscheme
-colorscheme nofrils-acme
+colorscheme default
 
 " netrw
 let g:netrw_liststyle=3
