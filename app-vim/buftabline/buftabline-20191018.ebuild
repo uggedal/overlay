@@ -2,7 +2,7 @@ EAPI=6
 
 inherit vim-plugin vcs-snapshot
 
-REF="14d208b1fa5f4308383e3ce429d57c84423029f9"
+REF="d9a75fe730921426eff7311cd1390ec628ede9d5"
 MY_PN="vim-${PN}"
 
 DESCRIPTION="vim plugin: buffer list that lives in the tabline"
