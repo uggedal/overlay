@@ -11,4 +11,3 @@ sys-apps/iproute2 -berkdb -iptables
 sys-apps/net-tools -arp
 sys-apps/systemd -kmod
 sys-apps/util-linux static-libs -cramfs -suid
-sys-fs/btrfs-progs -convert -zstd
