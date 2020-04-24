@@ -12,7 +12,7 @@ PKGDIR=$DIR/packages
 MOUNTS='dev proc sys usr/portage'
 
 rootfs() {
-	local p=-nomultilib
+	local p=-systemd
 	local a=amd64
 	local d=releases/$a/autobuilds
 
