@@ -17,9 +17,9 @@ rootfs() {
 
 	if ! [ -d $ROOTFS/etc ]; then
 		mkdir -p $ROOTFS
-		local t=$(curl -s http://$MIRROR/$d/latest-stage3-$a$p.txt |
+		local t=$(curl -s https://$MIRROR/$d/latest-stage3-$a$p.txt |
 			awk 'END {print $1 }')
-		curl http://$MIRROR/$d/$t |
+		curl https://$MIRROR/$d/$t |
 			tar -C $ROOTFS -xjp --xattrs
 	fi
 
@@ -64,7 +64,7 @@ conf() {
 	USE=""
 	MAKEOPTS="--jobs=4 --load-average=4.0"
 	EMERGE_DEFAULT_OPTS="--jobs=4 --load-average=4.0"
-	GENTOO_MIRRORS="http://$MIRROR/"
+	GENTOO_MIRRORS="https://$MIRROR/"
 	FEATURES="buildpkg"
 	DISTDIR="/usr/local/portage/build/distfiles"
 	PKGDIR="/usr/local/portage/build/packages"
