@@ -4,7 +4,7 @@
 
 DIR=$(readlink -f $(dirname $0))
 
-MIRROR=mirror.netcologne.de/gentoo
+MIRROR=mirror.mdfnet.se/gentoo
 
 ROOTFS=$DIR/rootfs
 DISTDIR=$DIR/distfiles
