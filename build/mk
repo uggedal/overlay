@@ -64,10 +64,14 @@ conf() {
 	USE=""
 	MAKEOPTS="--jobs=4 --load-average=4.0"
 	EMERGE_DEFAULT_OPTS="--jobs=4 --load-average=4.0"
-	GENTOO_MIRRORS="https://$MIRROR/"
 	FEATURES="buildpkg"
+
+	GENTOO_MIRRORS="https://$MIRROR/"
+
 	DISTDIR="/usr/local/portage/build/distfiles"
 	PKGDIR="/usr/local/portage/build/packages"
+
+	LC_MESSAGES=C
 	EOF
 
 	rm -f $ROOTFS/etc/portage/make.profile
