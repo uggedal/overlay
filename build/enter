@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+DIR=$(readlink -f $(dirname $0))
+. $DIR/lib.sh
+
+mnt
+conf
+
+chroot $ROOTFS /bin/bash -l
