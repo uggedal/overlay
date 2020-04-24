@@ -35,8 +35,10 @@ mnt() {
 	done
 
 	for d in $MOUNTS; do
-		grep -q $ROOTFS/$d /proc/mounts ||
-			mount -o rbind,ro /$d $ROOTFS/$d
+		if [ -d /$d ]; then
+			grep -q $ROOTFS/$d /proc/mounts ||
+				mount -o rbind,ro /$d $ROOTFS/$d
+		fi
 	done
 
 	grep -q $ROOTFS/usr/local/portage /proc/mounts ||
