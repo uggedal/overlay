@@ -9,7 +9,6 @@ MIRROR=mirror.mdfnet.se/gentoo
 ROOTFS=$DIR/rootfs
 DISTDIR=$DIR/distfiles
 PKGDIR=$DIR/packages
-MOUNTS='dev proc sys usr/portage'
 
 rootfs() {
 	local p=-systemd
@@ -27,22 +26,29 @@ rootfs() {
 	mkdir -p $DISTDIR $PKGDIR
 }
 
+_mnt() {
+	local typ=$1
+	local dir=$2
+	shift 2
+
+	grep -q $ROOTFS/$dir /proc/mounts ||
+		mount $typ $ROOTFS/$dir "$@"
+}
+
 mnt() {
 	local d
 
-	for d in $MOUNTS usr/local/portage; do
-		[ -d $ROOTFS/$d ] || mkdir -p $ROOTFS/$d
-	done
+	_mnt proc proc -t proc -o nosuid,noexec,nodev
+	_mnt sys sys -t sysfs -o nosuid,noexec,nodev
+	_mnt efivars sys/firmware/efi/efivars -t efivarfs -o nosuid,noexec,nodev
+	_mnt udev dev -t devtmpfs -o mode=0755,nosuid
+	_mnt devpts dev/pts -t devpts -o mode=0620,gid=5,nosuid,noexec
+	_mnt shm dev/shm -t tmpfs -o mode=1777,nosuid,nodev
+	_mnt /run run --bind
+	_mnt tmp tmp -t tmpfs -o mode=1777,strictatime,nodev,nosuid
 
-	for d in $MOUNTS; do
-		if [ -d /$d ]; then
-			grep -q $ROOTFS/$d /proc/mounts ||
-				mount -o rbind,ro /$d $ROOTFS/$d
-		fi
-	done
-
-	grep -q $ROOTFS/usr/local/portage /proc/mounts ||
-		mount -o rbind $(readlink -f $DIR/..) $ROOTFS/usr/local/portage
+	mkdir -p $ROOTFS/usr/local/portage
+	_mnt $(readlink -f $DIR/..) usr/local/portage --bind
 }
 
 conf() {
@@ -112,12 +118,21 @@ cleanup() {
 	chroot $ROOTFS /usr/bin/emerge --depclean
 }
 
+_umnt() {
+	umount $ROOTFS/$1
+}
+
 umnt() {
-	for d in $MOUNTS usr/local/portage; do
-		if grep -q $ROOTFS/$d /proc/mounts; then
-			umount -l  $ROOTFS/$d
-		fi
-	done
+	_umnt usr/local/portage
+
+	_umnt tmp
+	_umnt run
+	_umnt dev/shm
+	_umnt dev/pts
+	_umnt dev
+	_umnt sys/firmware/efi/efivars
+	_umnt sys
+	_umnt proc
 }
 
 if [ "$1" = -f ]; then
