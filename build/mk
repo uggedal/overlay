@@ -88,6 +88,10 @@ conf() {
 
 prepare() {
 	chroot $ROOTFS /usr/bin/eselect news read --quiet all
+
+	if ! [ -d $ROOTFS/var/db/repos/gentoo ]; then
+		chroot $ROOTFS /usr/bin/emerge-webrsync
+	fi
 }
 
 emerge() {
