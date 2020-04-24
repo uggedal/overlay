@@ -289,9 +289,6 @@ let g:buftabline_indicators=1
 nmap <c-p> <Plug>PickerEdit
 
 
-let g:vimwiki_list = [wiki_1]
-let g:vimwiki_ext2syntax = {'.md': 'markdown'}
-let g:vimwiki_markdown_link_ext = 1
 
 " git sync commit leader binding:
 function GitCi()
