@@ -10,6 +10,7 @@ RDEPEND="
 	configs/interactive
 	app-shells/fzy
 	app-vim/buftabline
+	app-vim/picker
 	dev-vcs/git
 	sys-apps/the_silver_searcher
 "
