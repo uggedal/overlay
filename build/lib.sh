@@ -69,6 +69,15 @@ conf() {
 	LC_MESSAGES=C
 	EOF
 
+	# Unable to use */* atom in profile packages.use:
+	cat <<-EOF >$ROOTFS/etc/portage/package.use/python
+	*/* PYTHON_TARGETS: -python2_7 -python3_6 python3_7
+	*/* PYTHON_SINGLE_TARGET: -* python3_7
+
+	# Autonake test depend onf python 2.7:
+	sys-devel/automake -test
+	EOF
+
 	rm -f $ROOTFS/etc/portage/make.profile
 	ln -s ../../usr/local/portage/profiles/amd64 \
 		$ROOTFS/etc/portage/make.profile
