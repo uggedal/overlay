@@ -6,4 +6,8 @@ DIR=$(readlink -f $(dirname $0))
 mnt
 conf
 
-chroot $ROOTFS /bin/bash -l
+if [ "$1" ]; then
+	chroot $ROOTFS "$@"
+else
+	chroot $ROOTFS /bin/bash -l
+fi
