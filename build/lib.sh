@@ -88,6 +88,13 @@ conf() {
 
 	rm -rf $ROOTFS/etc/portage/savedconfig
 	cp -r $DIR/savedconfig $ROOTFS/etc/portage
+
+	local locale='en_US.UTF-8 UTF-8'
+
+	if ! grep -q "^$locale\$" $ROOTFS/etc/locale.gen; then
+		echo "$locale" >> $ROOTFS/etc/locale.gen
+		chroot $ROOTFS locale-gen
+	fi
 }
 
 
