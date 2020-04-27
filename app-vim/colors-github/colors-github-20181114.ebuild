@@ -14,3 +14,10 @@ SLOT="0"
 KEYWORDS="amd64"
 
 VIM_PLUGIN_HELPFILES="github_colors.txt"
+
+src_prepare() {
+	default
+
+	# Remove unwanted files:
+	rm -r shots || die
+}
