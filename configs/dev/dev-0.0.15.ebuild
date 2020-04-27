@@ -7,7 +7,7 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
-	configs/interactive
+	configs/cli
 	app-shells/fzy
 	app-vim/black
 	app-vim/buftabline
