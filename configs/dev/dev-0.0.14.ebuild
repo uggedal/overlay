@@ -9,7 +9,14 @@ KEYWORDS="amd64"
 RDEPEND="
 	configs/interactive
 	app-shells/fzy
+	app-vim/black
 	app-vim/buftabline
+	app-vim/commentary
+	app-vim/easydir
+	app-vim/eunuch
+	app-vim/jinja
+	app-vim/lastplace
+	app-vim/markdown
 	app-vim/picker
 	app-vim/colors-github
 	dev-vcs/git
