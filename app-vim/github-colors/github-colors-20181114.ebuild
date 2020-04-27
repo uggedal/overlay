@@ -3,7 +3,7 @@ EAPI=7
 inherit vim-plugin vcs-snapshot
 
 REF="acb712c76bb73c20eb3d7e625a48b5ff59f150d0"
-MY_PN="vim-${PN}"
+MY_PN="vim-colors-github"
 
 DESCRIPTION="vim colorscheme based on Github's syntax highlighting"
 HOMEPAGE="https://github.com/cormacrelf/vim-colors-github"

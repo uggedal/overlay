@@ -18,7 +18,7 @@ RDEPEND="
 	app-vim/lastplace
 	app-vim/markdown
 	app-vim/picker
-	app-vim/colors-github
+	app-vim/github-colors
 	dev-vcs/git
 	sys-apps/the_silver_searcher
 "
