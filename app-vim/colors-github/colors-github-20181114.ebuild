@@ -13,4 +13,4 @@ LICENSE="vim"
 SLOT="0"
 KEYWORDS="amd64"
 
-VIM_PLUGIN_HELPFILES="${PN}.txt"
+VIM_PLUGIN_HELPFILES="github_colors.txt"
