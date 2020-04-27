@@ -290,7 +290,14 @@ let g:buftabline_indicators=1
 " vim-picker normal mode binding:
 nmap <c-p> <Plug>PickerEdit
 
+" black max line length:
+let g:black_linelength = 79
 
+" black automatic fomatting when saving python files:
+augroup blackformat
+	autocmd!
+	autocmd FileType python autocmd BufWritePre <buffer> execute ':Black'
+augroup END
 
 " git sync commit leader binding:
 function GitCi()
@@ -298,3 +305,37 @@ function GitCi()
 endfunction
 command! GitCi :call GitCi()
 nnoremap <leader>g :GitCi<CR>
+
+" markdown task extensions:
+function MarkdownCheckboxToggle()
+	let line = getline('.')
+	let repl = substitute(line, '\[ \]', '\[x\]', '')
+
+	if repl ==? line
+		let repl = substitute(line, '\[x\]', '\[ \]', '')
+	endif
+
+	call setline('.', repl)
+endfunction
+
+augroup markdowntask
+	autocmd!
+
+	autocmd Syntax markdown nnoremap <leader>t
+				\ :call MarkdownCheckboxToggle()<CR>
+	autocmd Syntax markdown vnoremap <leader>t
+				\ :call MarkdownCheckboxToggle()<CR>
+
+	autocmd Syntax markdown syntax match mkdCheckboxComplete
+				\ /^\s*-\s*\[x\]\s.*$/
+				\ contains=@mkdNonListItem
+	autocmd Syntax markdown highlight link mkdCheckboxComplete Comment
+	autocmd Syntax markdown syntax match mkdCheckboxUrgent
+				\ /^\s*-\s*\[ \]\s\+!\s\+.*$/
+				\ contains=@mkdNonListItem
+	autocmd Syntax markdown highlight link mkdCheckboxUrgent Constant
+	autocmd Syntax markdown syntax match mkdCheckboxCritical
+				\ /^\s*-\s*\[ \]\s\+!!\s\+.*$/
+				\ contains=@mkdNonListItem
+	autocmd Syntax markdown highlight link mkdCheckboxCritical Type
+augroup END

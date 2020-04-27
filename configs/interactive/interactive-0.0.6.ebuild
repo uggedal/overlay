@@ -9,6 +9,7 @@ KEYWORDS="amd64"
 RDEPEND="
 	configs/base
 
+	app-admin/sudo
 	app-editors/vim
 	app-misc/tmux
 	app-shells/bash-completion
@@ -20,6 +21,8 @@ S="${WORKDIR}"
 src_install() {
 	insinto /etc
 	doins "${FILESDIR}"/tmux.local.conf
-
 	dobin "${FILESDIR}"/t
+
+	insinto /etc/sudoers.d
+	doins "${FILESDIR}"/sudo-nopasswd
 }
