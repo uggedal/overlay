@@ -10,7 +10,7 @@ fi
 
 # Sane long history (except for cmds beginning with space or dupes):
 shopt -s histappend
-HISTSIZE=10000
+HISTSIZE=100000
 HISTFILESIZE=$HISTSIZE
 HISTCONTROL=ignoreboth
 
