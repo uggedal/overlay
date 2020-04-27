@@ -19,6 +19,8 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_install() {
+	doenvd "${FILESDIR}"/99editor
+
 	insinto /etc
 	doins "${FILESDIR}"/tmux.local.conf
 	dobin "${FILESDIR}"/t
