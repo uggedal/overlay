@@ -2,7 +2,7 @@ ROOTFS=$DIR/rootfs
 DISTDIR=$DIR/distfiles
 PKGDIR=$DIR/packages
 
-[ "$(id -u)" -eq 0 ] || { echo needs root; exit 1; }
+[ "$(id -u)" = 0 ] || exec sudo $0 "$@"
 
 _mnt() {
 	local typ=$1
