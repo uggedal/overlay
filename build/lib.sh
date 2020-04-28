@@ -1,4 +1,5 @@
-ROOTFS=$DIR/rootfs
+# Put rootfs out of git repo:
+ROOTFS=$(realpath $DIR/../../rootfs)
 DISTDIR=$DIR/distfiles
 PKGDIR=$DIR/packages
 
