@@ -4,3 +4,4 @@ app-shells/bash-completion
 dev-vcs/git
 
 configs/dev
+configs/pkg
