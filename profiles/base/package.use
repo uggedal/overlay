@@ -1,5 +1,6 @@
 app-admin/sudo -sendmail
 app-crypt/gnupg -smartcard
+app-editors/vim python
 app-misc/tmux vim-syntax
 app-shells/bash -net
 dev-libs/elfutils -utils
