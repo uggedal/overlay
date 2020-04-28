@@ -6,16 +6,16 @@ DIR=$(readlink -f $(dirname $0))
 MIRROR=mirror.mdfnet.se/gentoo
 
 rootfs() {
-	local p=-systemd
+	local p=nomultilib
 	local a=amd64
 	local d=releases/$a/autobuilds
 
 	if ! [ -d $ROOTFS/etc ]; then
 		mkdir -p $ROOTFS
-		local t=$(curl -s https://$MIRROR/$d/latest-stage3-$a$p.txt |
+		local t=$(curl -s https://$MIRROR/$d/latest-stage3-$a-$p.txt |
 			awk 'END {print $1 }')
 		curl https://$MIRROR/$d/$t |
-			tar -C $ROOTFS -xjp --xattrs
+			tar -C $ROOTFS -xJp --xattrs
 	fi
 
 	mkdir -p $DISTDIR $PKGDIR
