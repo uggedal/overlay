@@ -7,7 +7,6 @@ FEATURES="nodoc noinfo"
 
 INSTALL_MASK="
 	${INSTALL_MASK}
-	/etc/conf.d
-	/etc/inid.d
-	/etc/xinit.d
+	/lib/systemd
+	/usr/lib/systemd
 "
