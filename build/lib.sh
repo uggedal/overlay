@@ -3,6 +3,9 @@ ROOTFS=$(realpath $DIR/../../rootfs)
 DISTDIR=$DIR/distfiles
 PKGDIR=$DIR/packages
 
+MIRROR=mirror.mdfnet.se/gentoo
+
+
 [ "$(id -u)" = 0 ] || exec sudo $0 "$@"
 
 _mnt() {
