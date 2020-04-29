@@ -13,7 +13,8 @@ CONFIG_BLK_DEV_MD=y
 CONFIG_MD_AUTODETECT=n
 CONFIG_MD_RAID1=y
 
-# FUSE (for mergerfs):
+# Filesystems:
+CONFIG_VFAT_FS=y
 CONFIG_FUSE_FS=y
 
 # Graphics:
