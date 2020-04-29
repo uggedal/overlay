@@ -1,7 +1,5 @@
-inherit versionator
-
 MY_P="linux-${PV}"
-KV_MAJOR=$(get_version_component_range 1 ${PV})
+KV_MAJOR=$(ver_cut 1 ${PV})
 
 HOMEPAGE="http://git.uggedal.com/overlay"
 SRC_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.x/${MY_P}.tar.xz"
