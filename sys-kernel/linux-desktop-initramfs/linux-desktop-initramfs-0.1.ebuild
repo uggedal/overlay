@@ -39,5 +39,5 @@ src_compile() {
 
 src_install() {
 	insinto /boot
-	doins initramfs.cpio.gz
+	doins initramfs-desktop.cpio.gz
 }
