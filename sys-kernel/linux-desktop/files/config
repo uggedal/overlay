@@ -14,7 +14,7 @@ CONFIG_MD_AUTODETECT=n
 CONFIG_MD_RAID1=y
 
 # FUSE (for mergerfs):
-CONFIG_FUSE=y
+CONFIG_FUSE_FS=y
 
 # Graphics:
 CONFIG_MTRR=y
