@@ -8,7 +8,8 @@ LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND="dev-lang/perl
-	sys-devel/bc"
+	sys-devel/bc
+	virtual/libelf"
 
 S="${WORKDIR}"/${MY_P}
 
