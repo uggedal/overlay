@@ -54,7 +54,7 @@ K_KERNELBIN_BASE_CONFIG="
 "
 
 kernel-binary_src_configure() {
-	local c missing
+	local c errors
 	local _arch=$ARCH
 	unset ARCH
 
@@ -66,15 +66,23 @@ kernel-binary_src_configure() {
 	yes "" | emake -j1 -s oldconfig
 
 	# Check that all wanted config options were used:
-	for c in $(grep ^CONFIG_\*=y base_config); do
+	for c in $(grep '^CONFIG_.*=[ym]$' base_config); do
 		if ! grep -q "^$c\$" .config; then
 			ewarn "Missing config: $c"
-			missing=yes
+			errors=yes
 		fi
 	done
 
-	if [ "$missing" = yes ]; then
-		die "Aborted due to missing config options"
+	# Check that all unwanted config options were unset:
+	for c in $(grep '^CONFIG_.*=n$' base_config); do
+		if ! grep -q "^# ${c%=*} is not set\$" .config; then
+			ewarn "Unwanted config: $c"
+			errors=yes
+		fi
+	done
+
+	if [ "$errors" = yes ]; then
+		die "Aborted due to errors config options"
 	fi
 
 	ARCH=$_arch
