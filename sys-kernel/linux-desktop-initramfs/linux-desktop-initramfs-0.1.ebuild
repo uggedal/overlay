@@ -5,7 +5,8 @@ DESCRIPTION="Linux initramfs for Skylake desktop"
 SLOT="0"
 KEYWORDS="amd64"
 
-DEPEND="sys-fs/mdadm[static]"
+DEPEND="sys-fs/mdadm[static]
+app-arch/cpio"
 
 S="${WORKDIR}"
 
