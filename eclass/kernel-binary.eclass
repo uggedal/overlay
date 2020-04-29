@@ -66,7 +66,7 @@ kernel-binary_src_configure() {
 	yes "" | emake -j1 -s oldconfig
 
 	# Check that all wanted config options were used:
-	for c in $(grep ^CONFIG_ base_config); do
+	for c in $(grep ^CONFIG_\*=y base_config); do
 		if ! grep -q "^$c\$" .config; then
 			ewarn "Missing config: $c"
 			missing=yes
