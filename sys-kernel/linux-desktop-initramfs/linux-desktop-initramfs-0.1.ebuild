@@ -2,6 +2,7 @@ EAPI=7
 
 DESCRIPTION="Linux initramfs for Skylake desktop"
 
+SLOT="0"
 KEYWORDS="amd64"
 
 DEPEND="sys-fs/mdadm[static]"
