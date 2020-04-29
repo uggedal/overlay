@@ -14,3 +14,4 @@ sys-apps/iproute2 -berkdb -iptables
 sys-apps/net-tools -arp
 sys-apps/util-linux -cramfs
 sys-kernel/genkernel -firmware
+sys-process/cronie -anacron
