@@ -34,7 +34,7 @@ src_compile() {
 	chmod +x init
 
 	find . -print0 | cpio --null --create --verbose --format=newc |
-		gzip --best > initramfs.cpio.gz
+		gzip --best > initramfs-desktop.cpio.gz
 }
 
 src_install() {
