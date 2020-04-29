@@ -13,6 +13,6 @@ net-misc/openssh libedit
 sys-apps/iproute2 -berkdb -iptables
 sys-apps/net-tools -arp
 sys-apps/util-linux -cramfs
-sys-boot/grub -grub_platforms_pc
+sys-boot/grub -grub_platforms_pc -fonts -themes
 sys-kernel/genkernel -firmware
 sys-process/cronie -anacron
