@@ -54,14 +54,29 @@ K_KERNELBIN_BASE_CONFIG="
 "
 
 kernel-binary_src_configure() {
+	local c missing
 	local _arch=$ARCH
 	unset ARCH
 
 	{
 		echo "$K_KERNELBIN_BASE_CONFIG" | sed 's/^[[:space:]]*//'
 		cat "${FILESDIR}"/config
-	} > .config
+	} > base_config
+	cp base_config .config
 	yes "" | emake -j1 -s oldconfig
+
+	# Check that all wanted config options were used:
+	for c in $(grep ^CONFIG_ base_config); do
+		if ! grep -q "^$c\$" .config; then
+			ewarn "Missing config: $c"
+			missing=yes
+		fi
+	done
+
+	if [ "$missing" = yes ]; then
+		die "Aborted due to missing config options"
+	fi
+
 	ARCH=$_arch
 }
 
