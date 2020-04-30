@@ -14,6 +14,6 @@ sys-apps/net-tools -arp
 sys-apps/util-linux -cramfs
 sys-boot/grub -grub_platforms_pc -fonts -themes
 sys-fs/cryptsetup -luks1_default
-sys-fs/lvm2 device-mapper-only
+sys-fs/lvm2 device-mapper-only -thin
 sys-kernel/genkernel -firmware
 sys-process/cronie -anacron
