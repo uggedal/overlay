@@ -290,15 +290,6 @@ let g:buftabline_indicators=1
 " vim-picker normal mode binding:
 nmap <c-p> <Plug>PickerEdit
 
-" black max line length:
-let g:black_linelength = 79
-
-" black automatic fomatting when saving python files:
-augroup blackformat
-	autocmd!
-	autocmd FileType python autocmd BufWritePre <buffer> execute ':Black'
-augroup END
-
 " git sync commit leader binding:
 function GitCi()
 	!git ci -am sync && git push

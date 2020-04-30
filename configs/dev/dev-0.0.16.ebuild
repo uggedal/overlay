@@ -9,7 +9,6 @@ KEYWORDS="amd64"
 RDEPEND="
 	configs/cli
 	app-shells/fzy
-	app-vim/black
 	app-vim/buftabline
 	app-vim/commentary
 	app-vim/easydir
