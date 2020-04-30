@@ -13,5 +13,7 @@ sys-apps/iproute2 -berkdb -iptables
 sys-apps/net-tools -arp
 sys-apps/util-linux -cramfs
 sys-boot/grub -grub_platforms_pc -fonts -themes
+sys-fs/cryptsetup -luks1_default
+sys-fs/lvm2 device-mapper-only
 sys-kernel/genkernel -firmware
 sys-process/cronie -anacron
