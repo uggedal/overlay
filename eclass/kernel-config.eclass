@@ -68,16 +68,12 @@ kernel-config_pkg_postinst() {
 	local _arch=$ARCH
 	unset ARCH
 
-	einfo "Config sanity check start"
-
 	cd "${kern}" || die "No kernel source in ${kern}"
 
 	cp -f .config config_orig
-	einfo "Backed up original config"
 
 	cp "${cfg}" .config
 	yes "" | emake -j1 -s oldconfig || die "Unable to make oldconfig"
-	einfo "Made oldconfig"
 
 	# Check that all wanted config options were used:
 	for c in $(grep '^CONFIG_.*=[ym]$' "${cfg}"); do
@@ -86,7 +82,6 @@ kernel-config_pkg_postinst() {
 			errors=yes
 		fi
 	done
-	einfo "Checked wanted options"
 
 	# Check that all unwanted config options were unset:
 	for c in $(grep '^CONFIG_.*=n$' /etc/kernels/"${cfg}"); do
@@ -95,16 +90,14 @@ kernel-config_pkg_postinst() {
 			errors=yes
 		fi
 	done
-	einfo "Checked unwanted options"
 
 	cp -f config_orig .config
-	einfo "Restored original config"
 
 	if [ "$errors" = yes ]; then
 		die "Aborted due to errors config options"
 	fi
 
-	einfo "Config passed sanity checks"
+	ewarn "Config passed sanity checks"
 
 	ARCH=$_arch
 }
