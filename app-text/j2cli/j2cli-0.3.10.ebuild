@@ -15,5 +15,5 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
-	dev-python/jinja[${PYTHON_SINGLE_USEDEP}]
-	dev-python/pyyaml[${PYTHON_SINGLE_USEDEP}]"
+	dev-python/jinja[${PYTHON_USEDEP}]
+	dev-python/pyyaml[${PYTHON_USEDEP}]"
