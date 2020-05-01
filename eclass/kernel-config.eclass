@@ -7,7 +7,7 @@ DEPEND="dev-lang/perl
 	sys-devel/bc
 	virtual/libelf"
 
-S="${WORKDIR}"/${MY_P}
+S="${WORKDIR}"
 
 EXPORT_FUNCTIONS src_configure src_install pkg_postinst
 
@@ -58,7 +58,7 @@ kernel-config_src_configure() {
 
 kernel-config_src_install() {
 	insinto /etc/kernels
-	newins base_config "{P}"
+	newins base_config "${P}"
 }
 
 kernel-config_pkg_postinst() {
