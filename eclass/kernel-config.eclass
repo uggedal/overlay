@@ -68,6 +68,8 @@ kernel-config_pkg_postinst() {
 	local _arch=$ARCH
 	unset ARCH
 
+	einfo "Config sanity check start"
+
 	cd "${kern}" || die "No kernel source in ${kern}"
 
 	cp -f .config config_orig
