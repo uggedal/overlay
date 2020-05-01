@@ -63,8 +63,8 @@ kernel-config_src_install() {
 
 kernel-config_pkg_postinst() {
 	local c errors
-	local cfg="${EROOT}etc/kernels/${P}"
-	local kern="${EROOT}usr/src/linux"
+	local cfg="${EROOT}/etc/kernels/${P}"
+	local kern="${EROOT}/usr/src/linux"
 	local _arch=$ARCH
 	unset ARCH
 
@@ -73,7 +73,7 @@ kernel-config_pkg_postinst() {
 	cp -f .config config_orig
 
 	cp "${cfg}" .config
-	yes "" | emake -j1 -s oldconfig
+	yes "" | emake -j1 -s oldconfig || die "Unable to make oldconfig"
 
 	# Check that all wanted config options were used:
 	for c in $(grep '^CONFIG_.*=[ym]$' "${cfg}"); do
