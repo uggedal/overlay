@@ -7,7 +7,9 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
+	app-admin/ps_mem
 	app-portage/gentoolkit
+	sys-process/htop
 "
 
 S="${WORKDIR}"
