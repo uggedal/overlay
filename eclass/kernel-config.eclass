@@ -9,7 +9,7 @@ DEPEND="dev-lang/perl
 
 S="${WORKDIR}"/${MY_P}
 
-EXPORT_FUNCTIONS src_configure src_compile src_install pkg_postinst pkg_postrm
+EXPORT_FUNCTIONS src_configure src_install pkg_postinst
 
 K_KERNELCFG_BASE_CONFIG="
 	# Base:
