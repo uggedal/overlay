@@ -63,18 +63,19 @@ kernel-config_src_install() {
 
 kernel-config_pkg_postinst() {
 	local c errors
+	local cfg="${EROOT}etc/kernels/${P}"
 	local _arch=$ARCH
 	unset ARCH
 
-	cd /usr/src/linux || die "No kernel source"
+	cd "${EROOT}usr/src/linux" || die "No kernel source"
 
 	cp -f .config config_orig
 
-	cp /etc/kernels/"${P}" .config
+	cp "${cfg}" .config
 	yes "" | emake -j1 -s oldconfig
 
 	# Check that all wanted config options were used:
-	for c in $(grep '^CONFIG_.*=[ym]$' /etc/kernels/"${P}"); do
+	for c in $(grep '^CONFIG_.*=[ym]$' "${cfg}"); do
 		if ! grep -q "^$c\$" .config; then
 			ewarn "Missing config: $c"
 			errors=yes
@@ -82,7 +83,7 @@ kernel-config_pkg_postinst() {
 	done
 
 	# Check that all unwanted config options were unset:
-	for c in $(grep '^CONFIG_.*=n$' /etc/kernels/"${P}"); do
+	for c in $(grep '^CONFIG_.*=n$' /etc/kernels/"${cfg}"); do
 		if ! grep -q "^# ${c%=*} is not set\$" .config; then
 			ewarn "Unwanted config: $c"
 			errors=yes
