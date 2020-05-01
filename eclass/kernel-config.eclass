@@ -64,10 +64,11 @@ kernel-config_src_install() {
 kernel-config_pkg_postinst() {
 	local c errors
 	local cfg="${EROOT}etc/kernels/${P}"
+	local kern="${EROOT}usr/src/linux"
 	local _arch=$ARCH
 	unset ARCH
 
-	cd "${EROOT}usr/src/linux" || die "No kernel source"
+	cd "${kern}" || die "No kernel source in ${kern}"
 
 	cp -f .config config_orig
 
