@@ -95,5 +95,7 @@ kernel-config_pkg_postinst() {
 		die "Aborted due to errors config options"
 	fi
 
+	einfo "Config passed sanity checks"
+
 	ARCH=$_arch
 }
