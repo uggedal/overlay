@@ -1,8 +1,4 @@
-MY_P="linux-${PV}"
-KV_MAJOR=$(ver_cut 1 ${PV})
-
-HOMEPAGE="http://git.uggedal.com/overlay"
-SRC_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.x/${MY_P}.tar.xz"
+HOMEPAGE="https://github.com/uggedal/overlay"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,7 +11,7 @@ S="${WORKDIR}"/${MY_P}
 
 EXPORT_FUNCTIONS src_configure src_compile src_install pkg_postinst pkg_postrm
 
-K_KERNELBIN_BASE_CONFIG="
+K_KERNELCFG_BASE_CONFIG="
 	# Base:
 	CONFIG_SYSVIPC=y
 	CONFIG_MODULES=y
@@ -53,20 +49,32 @@ K_KERNELBIN_BASE_CONFIG="
 	CONFIG_NET_NS=y
 "
 
-kernel-binary_src_configure() {
+kernel-config_src_configure() {
+	{
+		echo "$K_KERNELCFG_BASE_CONFIG" | sed 's/^[[:space:]]*//'
+		cat "${FILESDIR}"/config
+	} > base_config
+}
+
+kernel-config_src_install() {
+	insinto /etc/kernels
+	newins base_config "{P}"
+}
+
+kernel-config_pkg_postinst() {
 	local c errors
 	local _arch=$ARCH
 	unset ARCH
 
-	{
-		echo "$K_KERNELBIN_BASE_CONFIG" | sed 's/^[[:space:]]*//'
-		cat "${FILESDIR}"/config
-	} > base_config
-	cp base_config .config
+	cd /usr/src/linux || die "No kernel source"
+
+	cp -f .config config_orig
+
+	cp /etc/kernels/"${P}" .config
 	yes "" | emake -j1 -s oldconfig
 
 	# Check that all wanted config options were used:
-	for c in $(grep '^CONFIG_.*=[ym]$' base_config); do
+	for c in $(grep '^CONFIG_.*=[ym]$' /etc/kernels/"${P}"); do
 		if ! grep -q "^$c\$" .config; then
 			ewarn "Missing config: $c"
 			errors=yes
@@ -74,49 +82,18 @@ kernel-binary_src_configure() {
 	done
 
 	# Check that all unwanted config options were unset:
-	for c in $(grep '^CONFIG_.*=n$' base_config); do
+	for c in $(grep '^CONFIG_.*=n$' /etc/kernels/"${P}"); do
 		if ! grep -q "^# ${c%=*} is not set\$" .config; then
 			ewarn "Unwanted config: $c"
 			errors=yes
 		fi
 	done
 
+	cp -f config_orig .config
+
 	if [ "$errors" = yes ]; then
 		die "Aborted due to errors config options"
 	fi
 
 	ARCH=$_arch
-}
-
-kernel-binary_src_compile() {
-	local _arch=$ARCH
-	unset ARCH
-
-	emake
-
-	ARCH=$_arch
-}
-
-kernel-binary_src_install() {
-	dodir /boot
-	emake modules_install install \
-		INSTALL_MOD_PATH="${ED}" \
-		INSTALL_PATH="${ED}"/boot
-}
-
-kernel-binary_grub2_mkconfig() {
-	local mkcfg="${ROOT}"usr/sbin/grub2-mkconfig
-	if [ -x "${mkcfg}" ]; then
-		"${mkcfg}" -o /boot/grub/grub.cfg
-	else
-		ewarn "Unable to find ${mkcfg}"
-	fi
-}
-
-kernel-binary_pkg_postinst() {
-	kernel-binary_grub2_mkconfig
-}
-
-kernel-binary_pkg_postrm() {
-	kernel-binary_grub2_mkconfig
 }
