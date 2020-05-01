@@ -13,7 +13,6 @@ RDEPEND="
 	app-vim/commentary
 	app-vim/easydir
 	app-vim/eunuch
-	app-vim/jinja
 	app-vim/lastplace
 	app-vim/markdown
 	app-vim/picker
