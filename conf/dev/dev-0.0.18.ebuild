@@ -7,7 +7,7 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
-	configs/cli
+	conf/cli
 	app-shells/fzy
 	app-vim/buftabline
 	app-vim/commentary

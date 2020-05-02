@@ -7,7 +7,7 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
-	configs/base
+	conf/base
 
 	app-admin/sudo
 	app-editors/vim

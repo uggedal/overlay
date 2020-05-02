@@ -3,5 +3,5 @@ app-misc/tmux
 app-shells/bash-completion
 dev-vcs/git
 
-configs/dev
-configs/pkg
+conf/dev
+conf/pkg
