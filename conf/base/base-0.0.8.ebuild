@@ -26,6 +26,7 @@ src_install() {
 
 	insinto /etc
 	doins "${FILESDIR}"/input.local.rc
+	doins "${FILESDIR}"/logrotate.conf
 
 	dosym /etc/init.d/sysklogd \
 		"${EPREFIX}/etc/runlevels/default/sysklogd"
