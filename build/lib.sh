@@ -52,8 +52,8 @@ umnt() {
 
 conf() {
 	mkdir -p $ROOTFS/etc/portage/repos.conf
-	cat <<-EOF >$ROOTFS/etc/portage/repos.conf/uggedal.conf
-	[uggedal]
+	cat <<-EOF >$ROOTFS/etc/portage/repos.conf/eju.conf
+	[eju]
 	location = /usr/local/portage
 	masters = gentoo
 	auto-sync = no
