@@ -7,6 +7,7 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
+	app-admin/logrotate
 	app-admin/ps_mem
 	app-admin/sysklogd
 	app-portage/gentoolkit
