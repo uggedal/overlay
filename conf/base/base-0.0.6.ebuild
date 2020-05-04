@@ -8,7 +8,9 @@ KEYWORDS="amd64"
 
 RDEPEND="
 	app-admin/ps_mem
+	app-admin/sysklogd
 	app-portage/gentoolkit
+	sys-process/cronie
 	sys-process/htop
 "
 
@@ -23,4 +25,9 @@ src_install() {
 
 	insinto /etc
 	doins "${FILESDIR}"/input.local.rc
+
+	dosym /etc/init.d/sysklogd \
+		"${EPREFIX}/etc/runlevels/default/sysklogd"
+	dosym /etc/init.d/cronie \
+		"${EPREFIX}/etc/runlevels/default/cronie"
 }
