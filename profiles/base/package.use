@@ -3,6 +3,7 @@ app-admin/sysklogd logrotate
 app-crypt/gnupg -smartcard
 app-misc/tmux vim-syntax
 app-shells/bash -net
+dev-lang/python sqlite
 dev-libs/elfutils -utils
 dev-vcs/git -python -webdav
 dev-util/cmake -ncurses
