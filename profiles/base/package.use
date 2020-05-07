@@ -18,5 +18,4 @@ sys-fs/cryptsetup -luks1_default
 sys-fs/lvm2 device-mapper-only -thin
 sys-kernel/genkernel -firmware
 sys-process/cronie -anacron
-www-servers/nginx vim-syntax
-www-servers/nginx NGINX_MODULES_HTTP: -browser
+www-servers/nginx vim-syntax NGINX_MODULES_HTTP: -browser
