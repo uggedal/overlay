@@ -13,6 +13,7 @@ INSTALL_MASK="
 
 NGINX_MODULES_HTTP="
 	access
+	addition
 	auth_basic
 	charset
 	fancyindex
