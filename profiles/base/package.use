@@ -18,4 +18,4 @@ sys-fs/cryptsetup -luks1_default
 sys-fs/lvm2 device-mapper-only -thin
 sys-kernel/genkernel -firmware
 sys-process/cronie -anacron
-www-servers/nginx vim-syntax -nginx_modules_http_browser
+www-servers/nginx vim-syntax nginx_modules_http_addition nginx_modules_http_fancyindex -nginx_modules_http_autoindex -nginx_modules_http_browser- nginx_modules_http_empty_gif -nginx_modules_http_fastcgi -nginx_modules_http_geo -nginx_modules_http_grpc -nginx_modules_http_limit_conn -nginx_modules_http_limit_req -nginx_modules_http_map -nginx_modules_http_memcached -nginx_modules_http_mirror -nginx_modules_http_referer -nginx_modules_http_scgi -nginx_modules_http_split_clients -nginx_modules_http_ssi -nginx_modules_http_upstream_hash -nginx_modules_http_upstream_ip_hash -nginx_modules_http_upstream_keepalive -nginx_modules_http_upstream_least_conn -nginx_modules_http_upstream_zone -nginx_modules_http_userid -nginx_modules_http_uwsgi
