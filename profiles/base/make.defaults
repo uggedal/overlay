@@ -10,3 +10,13 @@ INSTALL_MASK="
 	/lib/systemd
 	/usr/lib/systemd
 "
+
+NGINX_MODULES_HTTP="
+	access
+	auth_basic
+	charset
+	fancyindex
+	gzip
+	proxy
+	rewrite
+"
