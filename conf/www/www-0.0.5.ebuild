@@ -42,5 +42,5 @@ src_install() {
 	doins "${FILESDIR}"/dehydrated/hooks/cf.sh.j2
 
 	exeinto /etc/cron.daily
-	newexe "${FILESDIR}/dehydrated.cron dehydrated
+	newexe "${FILESDIR}"/dehydrated.cron dehydrated
 }
