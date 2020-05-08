@@ -15,6 +15,8 @@ RDEPEND="
 	www-servers/nginx
 "
 
+S="${WORKDIR}"
+
 src_install() {
 	insinto /etc/nginx
 	doins "${FILESDIR}"/nginx.conf
