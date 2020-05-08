@@ -23,7 +23,8 @@ src_install() {
 	doins "${FILESDIR}"/ffdhe4096.pem
 
 	insinto /etc/nginx/conf.d
-	doins "${FILESDIR}"/default.conf
-	doins "${FILESDIR}"/ssl.part
-	doins "${FILESDIR}"/site.conf.j2
+	doins "${FILESDIR}"/conf.d/default.conf
+	doins "${FILESDIR}"/conf.d/ssl.part
+	doins "${FILESDIR}"/conf.d/site.conf.j2
+	doins "${FILESDIR}"/conf.d/site.passwd.j2
 }
