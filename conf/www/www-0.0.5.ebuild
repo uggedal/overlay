@@ -12,6 +12,9 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
+	app-crypt/dehydrated
+	app-misc/jq
+	sys-apps/moreutils
 	www-servers/nginx
 "
 
@@ -30,4 +33,14 @@ src_install() {
 
 	dosym ../../init.d/nginx \
 		"${EPREFIX}/etc/runlevels/default/nginx"
+
+	insinto /etc/dehydrated
+	doins "${FILESDIR}"/dehydrated/config.j2
+	doins "${FILESDIR}"/dehydrated/domains.txt.j2
+
+	insinto /etc/dehydrated/hooks
+	doins "${FILESDIR}"/dehydrated/hooks/cf.sh.j2
+
+	exeinto /etc/cron.daily
+	newexe "${FILESDIR}/dehydrated.cron dehydrated
 }
