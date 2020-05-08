@@ -27,4 +27,7 @@ src_install() {
 	doins "${FILESDIR}"/conf.d/ssl.part
 	doins "${FILESDIR}"/conf.d/site.conf.j2
 	doins "${FILESDIR}"/conf.d/site.passwd.j2
+
+	dosym ../../init.d/nginx \
+		"${EPREFIX}/etc/runlevels/default/nginx"
 }
