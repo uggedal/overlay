@@ -14,3 +14,14 @@ KEYWORDS="amd64"
 RDEPEND="
 	www-servers/nginx
 "
+
+src_install() {
+	insinto /etc/nginx
+	doins "${FILESDIR}"/nginx.conf
+	doins "${FILESDIR}"/ffdhe4096.pem
+
+	insinto /etc/nginx/conf.d
+	doins "${FILESDIR}"/default.conf
+	doins "${FILESDIR}"/ssl.part
+	doins "${FILESDIR}"/site.conf.j2
+}
