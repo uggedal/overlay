@@ -10,6 +10,7 @@ dev-util/cmake -ncurses
 net-misc/curl -ftp -imap -pop3 -smtp -tftp
 net-misc/iputils -arping
 net-misc/openssh libedit
+net-misc/tigervnc dri3 server
 sys-apps/iproute2 -berkdb -iptables
 sys-apps/net-tools -arp
 sys-apps/util-linux -cramfs
