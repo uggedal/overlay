@@ -12,4 +12,5 @@ KEYWORDS="amd64"
 
 RDEPEND="
 	app-portage/repoman
+	dev-util/shellcheck-bin
 "
