@@ -9,6 +9,7 @@ USE="
 	acpi
 	cairo
 	dri
+	icu
 	lcms
 	opengl
 	pango
