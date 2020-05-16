@@ -15,6 +15,7 @@ RDEPEND="
 	app-admin/ps_mem
 	app-admin/sysklogd
 	app-portage/gentoolkit
+	app-portage/smart-live-rebuild
 	sys-process/cronie
 	sys-process/htop
 "
