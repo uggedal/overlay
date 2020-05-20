@@ -12,7 +12,7 @@ KEYWORDS="amd64"
 
 RDEPEND="
 	app-admin/logrotate
-	app-admin/needrestart/needrestart
+	app-admin/needrestart
 	app-admin/ps_mem
 	app-admin/sysklogd
 	app-portage/gentoolkit
