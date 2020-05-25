@@ -12,5 +12,6 @@ KEYWORDS="amd64"
 
 RDEPEND="
 	media-fonts/dejavu
+	media-fonts/ibm-plex
 	x11-terms/xterm
 "
