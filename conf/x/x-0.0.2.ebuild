@@ -12,4 +12,5 @@ KEYWORDS="amd64"
 
 RDEPEND="
 	media-fonts/dejavu
+	x11-terms/xterm
 "
