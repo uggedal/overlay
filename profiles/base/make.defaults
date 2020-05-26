@@ -13,6 +13,7 @@ USE="
 	lcms
 	opengl
 	pango
+	pulseaudio
 	truetype
 	unicode
 	X
