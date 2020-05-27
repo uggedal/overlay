@@ -14,4 +14,5 @@ RDEPEND="
 	media-fonts/dejavu
 	media-fonts/ibm-plex
 	x11-terms/xterm
+	www-client/firefox-bin
 "
