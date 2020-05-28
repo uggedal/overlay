@@ -6,6 +6,8 @@ USE="
 	-fortran
 	-nls
 
+	-ruby_targets_ruby24
+
 	acpi
 	cairo
 	dri
