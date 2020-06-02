@@ -14,6 +14,7 @@ media-gfx/imagemagick hdri png -X
 media-libs/mesa -gallium -llvm
 media-video/ffmpeg -X -opengl -network -truetype -fftools_aviocat -fftools_cws2fws -fftools_ffescape -fftools_ffeval -fftools_ffhash -fftools_fourcc2pixfmt -fftools_graph2dot -fftools_ismindex -fftools_pktdumper -fftools_qt-faststart -fftools_sidxindex -fftools_trasher
 virtual/ffmpeg -X -truetype
+net-mail/mailutils -tcpd
 net-misc/curl -ftp -imap -pop3 -smtp -tftp
 net-misc/iputils -arping
 net-misc/openssh libedit -X
