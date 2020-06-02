@@ -11,6 +11,7 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
+	sys-apps/smartmontools
 	sys-fs/cryptsetup
 	sys-fs/mergerfs
 "
