@@ -19,5 +19,9 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_install() {
-	:
+	insinto /etc
+	doins "${FILESDIR}"/smartd.conf
+
+	dosym ../../init.d/smartd \
+		"${EPREFIX}/etc/runlevels/default/smartd"
 }
