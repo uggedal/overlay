@@ -61,7 +61,8 @@ CONFIG_SND_HDA_CODEC_HDMI=m
 CONFIG_HIGH_RES_TIMERS=y
 
 # Net:
-CONFIG_R8169=y
+# Compile r8169 as module to enable udev firmware loading:
+CONFIG_R8169=m
 
 # USB:
 CONFIG_USB=y
