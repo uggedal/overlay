@@ -2,4 +2,5 @@ app-text
 app-vim
 conf
 dev-python
+net-misc
 sys-kernel
