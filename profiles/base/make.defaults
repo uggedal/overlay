@@ -21,12 +21,12 @@ USE="
 	X
 	xcb
 
-	video_cards_intel
-	video_cards_i965
-	-video_cards_amdgpu
+	video_cards_amdgpu
+	video_cards_radeonsi
+	-video_cards_intel
+	-video_cards_i965
 	-video_cards_nouveau
 	-video_cards_radeon
-	-video_cards_radeonsi
 	-video_cards_dummy
 	-video_cards_fbdev
 	-video_cards_vesa
