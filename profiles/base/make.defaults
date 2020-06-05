@@ -8,6 +8,8 @@ USE="
 
 	-ruby_targets_ruby24
 
+	elogind
+
 	acpi
 	cairo
 	dri
