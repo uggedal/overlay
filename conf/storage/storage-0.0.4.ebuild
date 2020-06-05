@@ -11,6 +11,8 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
+	app-admin/hddtemp
+	sys-apps/hdparm
 	sys-apps/smartmontools
 	sys-fs/cryptsetup
 	sys-fs/mergerfs
