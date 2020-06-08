@@ -38,6 +38,6 @@ src_install() {
 		"${EPREFIX}/etc/runlevels/default/sysklogd"
 	dosym ../../init.d/cronie \
 		"${EPREFIX}/etc/runlevels/default/cronie"
-	dosym ../../init.d/chrony \
-		"${EPREFIX}/etc/runlevels/default/chrony"
+	dosym ../../init.d/chronyd \
+		"${EPREFIX}/etc/runlevels/default/chronyd"
 }
