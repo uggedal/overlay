@@ -17,6 +17,7 @@ RDEPEND="
 	app-admin/sysklogd
 	app-portage/gentoolkit
 	app-portage/smart-live-rebuild
+	net-misc/chrony
 	sys-process/cronie
 	sys-process/htop
 "
@@ -37,4 +38,6 @@ src_install() {
 		"${EPREFIX}/etc/runlevels/default/sysklogd"
 	dosym ../../init.d/cronie \
 		"${EPREFIX}/etc/runlevels/default/cronie"
+	dosym ../../init.d/chrony \
+		"${EPREFIX}/etc/runlevels/default/chrony"
 }
