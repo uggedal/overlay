@@ -21,8 +21,6 @@ USE="
 	pulseaudio
 	truetype
 	unicode
-	X
-	xcb
 	wayland
 
 	video_cards_amdgpu
