@@ -13,6 +13,8 @@ KEYWORDS="amd64"
 RDEPEND="
 	media-fonts/dejavu
 	media-fonts/ibm-plex
+	x11-apps/xinit
+	x11-base/xorg-server
 	x11-terms/xterm
 	www-client/firefox-bin
 "
