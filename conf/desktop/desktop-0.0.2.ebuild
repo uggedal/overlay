@@ -11,9 +11,14 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
+	app-shells/fzy
 	media-fonts/dejavu
 	media-fonts/ibm-plex
 	gui-wm/sway
 	x11-terms/alacritty
 	www-client/firefox-bin
 "
+
+src_install() {
+	dobin "${FILESDIR}"/alacritty_menu"
+}
