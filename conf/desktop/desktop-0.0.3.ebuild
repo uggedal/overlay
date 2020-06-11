@@ -15,6 +15,7 @@ RDEPEND="
 	media-fonts/dejavu
 	media-fonts/ibm-plex
 	gui-wm/sway
+	x11-misc/xdg-utils
 	x11-terms/alacritty
 	www-client/firefox-bin
 "
