@@ -19,6 +19,8 @@ RDEPEND="
 	www-client/firefox-bin
 "
 
+S="${WORKDIR}"
+
 src_install() {
 	dobin "${FILESDIR}/alacritty_menu"
 }
