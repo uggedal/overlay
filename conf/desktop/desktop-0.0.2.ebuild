@@ -20,5 +20,5 @@ RDEPEND="
 "
 
 src_install() {
-	dobin "${FILESDIR}"/alacritty_menu"
+	dobin "${FILESDIR}/alacritty_menu"
 }
