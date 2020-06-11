@@ -14,9 +14,9 @@ dev-vcs/git -python -webdav
 dev-util/cmake -ncurses
 media-sound/pulseaudio -tcpd -asyncns
 media-gfx/imagemagick hdri png -X
-media-video/ffmpeg -X -opengl -network -truetype -fftools_aviocat -fftools_cws2fws -fftools_ffescape -fftools_ffeval -fftools_ffhash -fftools_fourcc2pixfmt -fftools_graph2dot -fftools_ismindex -fftools_pktdumper -fftools_qt-faststart -fftools_sidxindex -fftools_trasher vaapi
+media-video/ffmpeg -X -opengl -network -truetype -fftools_aviocat -fftools_cws2fws -fftools_ffescape -fftools_ffeval -fftools_ffhash -fftools_fourcc2pixfmt -fftools_graph2dot -fftools_ismindex -fftools_pktdumper -fftools_qt-faststart -fftools_sidxindex -fftools_trasher
 virtual/ffmpeg -X -truetype
-media-video/mpv libmpv vaapi -X -xv
+media-video/mpv libmpv -X -xv
 net-mail/mailutils -tcpd
 net-misc/curl -ftp -imap -pop3 -smtp -tftp
 net-misc/iputils -arping
