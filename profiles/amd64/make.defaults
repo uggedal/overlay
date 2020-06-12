@@ -1,4 +1,4 @@
-COMMON_FLAGS="-O2 -march=znver2 -pipe"
+COMMON_FLAGS="-O2 -march=znver2 --param l1-cache-line-size=64 --param l1-cache-size=32 -pipe"
 CFLAGS="${COMMON_FLAGS}"
 CXXFLAGS="${COMMON_FLAGS}"
 
