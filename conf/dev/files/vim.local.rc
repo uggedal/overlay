@@ -324,7 +324,7 @@ augroup markdowntask
 	autocmd Syntax markdown syntax match mkdCheckboxUrgent
 				\ /^\s*-\s*\[ \]\s\+!\s\+.*$/
 				\ contains=@mkdNonListItem
-	autocmd Syntax markdown highlight link mkdCheckboxUrgent Constant
+	autocmd Syntax markdown highlight link mkdCheckboxUrgent Error
 	autocmd Syntax markdown syntax match mkdCheckboxCritical
 				\ /^\s*-\s*\[ \]\s\+!!\s\+.*$/
 				\ contains=@mkdNonListItem
