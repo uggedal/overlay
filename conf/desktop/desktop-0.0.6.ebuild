@@ -17,6 +17,7 @@ RDEPEND="
 	media-gfx/imv
 	gui-apps/grim
 	gui-apps/slurp
+	gui-apps/wl-clipboard
 	gui-wm/sway
 	x11-misc/xdg-utils
 	x11-terms/alacritty
