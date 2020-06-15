@@ -14,6 +14,7 @@ RDEPEND="
 	app-shells/fzy
 	media-fonts/dejavu
 	media-fonts/ibm-plex
+	media-gfx/imv
 	gui-apps/grim
 	gui-apps/slurp
 	gui-wm/sway
