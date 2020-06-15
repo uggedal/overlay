@@ -23,6 +23,8 @@ USE="
 	unicode
 	wayland
 
+	png
+
 	vaapi
 
 	video_cards_amdgpu
