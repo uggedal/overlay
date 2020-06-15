@@ -18,7 +18,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="man mpd network popup pulseaudio tray +udev"
+IUSE="+man mpd network popup pulseaudio tray +udev"
 
 BDEPEND="
 	virtual/pkgconfig
