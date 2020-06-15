@@ -18,7 +18,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="+man mpd network popup pulseaudio tray +udev"
+IUSE="+man mpd network popup pulseaudio systemd tray +udev"
 
 BDEPEND="
 	virtual/pkgconfig
@@ -56,6 +56,7 @@ src_configure() {
 		$(meson_feature network libnl)
 		$(meson_feature popup gtk-layer-shell)
 		$(meson_feature pulseaudio)
+		$(meson_feature systemd)
 		$(meson_feature tray dbusmenu-gtk)
 		$(meson_feature udev libudev)
 	)
