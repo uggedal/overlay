@@ -20,13 +20,13 @@ S="${WORKDIR}"
 
 src_install() {
 	insinto /usr/share/backup
-	doins "${FILESDIR}"/restic-backup.j2
-	doins "${FILESDIR}"/restic-backup-cron.j2
+	doins "${FILESDIR}/restic-backup.j2"
+	doins "${FILESDIR}/restic-backup-cron.j2"
 
 	keepdir /var/log/backup
 	keepdir /var/backups/cache
 	fperms 750 /var/backups/cache
 
 	insinto /etc/logrotate.d
-	doins "${FILESDIR}/backup.logrotate backup
+	doins "${FILESDIR}/backup.logrotate backup"
 }
