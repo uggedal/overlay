@@ -28,5 +28,5 @@ src_install() {
 	fperms 750 /var/backups/cache
 
 	insinto /etc/logrotate.d
-	doins "${FILESDIR}/backup.logrotate backup"
+	newins "${FILESDIR}/backup.logrotate" backup
 }
