@@ -10,6 +10,7 @@ dev-lang/python sqlite
 dev-libs/elfutils -utils
 dev-libs/libpcre2 pcre16
 dev-cpp/cairomm X
+dev-libs/libdbusmenu gtk3
 dev-qt/qtgui egl
 dev-vcs/git -python -webdav
 dev-util/cmake -ncurses
