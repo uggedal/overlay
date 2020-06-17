@@ -1,3 +1,4 @@
+dev-libs/date ~amd64
 gui-apps/grim ~amd64
 gui-apps/slurp ~amd64
 gui-apps/waybar ~amd64
