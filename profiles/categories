@@ -1,6 +1,7 @@
 app-text
 app-vim
 conf
+dev-libs
 dev-python
 gui-apps
 net-misc
