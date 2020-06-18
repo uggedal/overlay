@@ -6,6 +6,7 @@ app-misc/tmux vim-syntax
 app-shells/bash -net
 app-text/hunspell l10n_en
 app-text/xmlto text
+dev-cpp/gtkmm X
 dev-lang/python sqlite
 dev-libs/elfutils -utils
 dev-libs/libpcre2 pcre16

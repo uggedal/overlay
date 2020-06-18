@@ -26,7 +26,7 @@ BDEPEND="
 "
 
 DEPEND="
-	dev-cpp/gtkmm:3.0
+	dev-cpp/gtkmm:3.0[X]
 	dev-libs/date:=
 	dev-libs/jsoncpp:=
 	dev-libs/libinput:=
