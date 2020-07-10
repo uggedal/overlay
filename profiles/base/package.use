@@ -12,6 +12,7 @@ dev-libs/elfutils -utils
 dev-libs/libpcre2 pcre16
 dev-cpp/cairomm X
 dev-libs/libdbusmenu gtk3
+dev-python/pygobject -python_targets_python2_7
 dev-qt/qtgui egl
 dev-vcs/git -python -webdav
 dev-util/cmake -ncurses
