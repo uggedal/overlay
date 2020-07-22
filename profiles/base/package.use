@@ -6,23 +6,22 @@ app-misc/tmux vim-syntax
 app-shells/bash -net
 app-text/hunspell l10n_en
 app-text/xmlto text
+dev-cpp/cairomm X
 dev-cpp/gtkmm X
 dev-lang/python sqlite
 dev-libs/elfutils -utils
-dev-libs/libpcre2 pcre16
-dev-cpp/cairomm X
 dev-libs/libdbusmenu gtk3
+dev-libs/libpcre2 pcre16
 dev-python/pygobject -python_targets_python2_7
 dev-qt/qtgui egl
-dev-vcs/git -python -webdav
 dev-util/cmake -ncurses
+dev-vcs/git -python -webdav
 gui-apps/waybar network popup tray
 media-gfx/imagemagick hdri png -X
-media-libs/libsdl2 gles2
 media-libs/libglvnd X
+media-libs/libsdl2 gles2
 media-sound/pulseaudio -tcpd -asyncns
 media-video/ffmpeg -X -opengl -network -truetype -fftools_aviocat -fftools_cws2fws -fftools_ffescape -fftools_ffeval -fftools_ffhash -fftools_fourcc2pixfmt -fftools_graph2dot -fftools_ismindex -fftools_pktdumper -fftools_qt-faststart -fftools_sidxindex -fftools_trasher
-virtual/ffmpeg -X -truetype
 media-video/mpv libmpv -X -xv
 net-mail/mailutils -tcpd
 net-misc/curl -ftp -imap -pop3 -smtp -tftp
@@ -41,6 +40,7 @@ sys-kernel/genkernel -firmware
 sys-kernel/linux-firmware initramfs
 sys-process/cronie -anacron
 sys-process/psmisc -X
+virtual/ffmpeg -X -truetype
 www-servers/nginx vim-syntax nginx_modules_http_addition nginx_modules_http_fancyindex -nginx_modules_http_autoindex -nginx_modules_http_browser -nginx_modules_http_empty_gif -nginx_modules_http_fastcgi -nginx_modules_http_geo -nginx_modules_http_grpc -nginx_modules_http_limit_conn -nginx_modules_http_limit_req -nginx_modules_http_map -nginx_modules_http_memcached -nginx_modules_http_mirror -nginx_modules_http_referer -nginx_modules_http_scgi -nginx_modules_http_split_clients -nginx_modules_http_ssi -nginx_modules_http_upstream_hash -nginx_modules_http_upstream_ip_hash -nginx_modules_http_upstream_keepalive -nginx_modules_http_upstream_least_conn -nginx_modules_http_upstream_zone -nginx_modules_http_userid -nginx_modules_http_uwsgi
 x11-libs/cairo X
 x11-libs/libva -opengl X
