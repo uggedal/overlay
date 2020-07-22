@@ -18,7 +18,6 @@ RDEPEND="
 	app-vim/easydir
 	app-vim/eunuch
 	app-vim/lastplace
-	app-vim/markdown
 	app-vim/picker
 	app-vim/selenized
 	dev-vcs/git
