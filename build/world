@@ -1,7 +1,0 @@
-app-editors/vim
-app-misc/tmux
-app-shells/bash-completion
-dev-vcs/git
-
-conf/dev
-conf/pkg
