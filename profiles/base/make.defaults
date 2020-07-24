@@ -6,6 +6,7 @@ USE="
 	-fortran
 	-nls
 
+	-python_targets_python2_7
 	-ruby_targets_ruby24
 
 	elogind
