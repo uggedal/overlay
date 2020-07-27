@@ -13,10 +13,8 @@ if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/any1/neatvnc.git"
 else
-	COMMIT="6ad4aba374153d36c99ea5073b747697774f4e3e"
-	SRC_URI="https://github.com/any1/neatvnc/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/any1/neatvnc/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
-	S="${WORKDIR}/${PN}-${COMMIT}"
 fi
 
 LICENSE="ISC"
