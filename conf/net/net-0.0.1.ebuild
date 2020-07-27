@@ -14,6 +14,8 @@ RDEPEND="
 	net-misc/dhcpcd
 "
 
+S="${WORKDIR}"
+
 src_install() {
 	dosym ../../init.d/dhcpcd \
 		"${EPREFIX}/etc/runlevels/default/dhcpcd"
