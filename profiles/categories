@@ -4,5 +4,6 @@ conf
 dev-libs
 dev-python
 gui-apps
+gui-libs
 net-misc
 sys-kernel
