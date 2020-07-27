@@ -18,6 +18,7 @@ RDEPEND="
 	gui-apps/grim
 	gui-apps/slurp
 	gui-apps/waybar
+	gui-apps/wayvnc
 	gui-apps/wl-clipboard
 	gui-wm/sway
 	x11-misc/xdg-utils
