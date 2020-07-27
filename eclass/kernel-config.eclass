@@ -67,6 +67,9 @@ kernel-config_src_configure() {
 kernel-config_src_install() {
 	insinto /etc/kernels
 	newins base_config "${P}"
+
+	insinto /etc
+	doins "${FILESDIR}/genkernel.conf"
 }
 
 kernel-config_pkg_postinst() {
