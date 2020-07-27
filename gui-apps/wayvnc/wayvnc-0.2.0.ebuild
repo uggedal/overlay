@@ -12,10 +12,8 @@ if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/any1/wayvnc.git"
 else
-	COMMIT="3742dc7144a82dafbc91d2f713741511e182ac07"
-	SRC_URI="https://github.com/any1/wayvnc/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/any1/wayvnc/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
-	S="${WORKDIR}/${PN}-${COMMIT}"
 fi
 
 LICENSE="ISC"
