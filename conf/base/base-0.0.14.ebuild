@@ -34,6 +34,9 @@ src_install() {
 	doins "${FILESDIR}"/input.local.rc
 	doins "${FILESDIR}"/logrotate.conf
 
+	insinto /etc/sysctl.d
+	newins "${FILESDIR}/sysctl.conf" local.conf
+
 	dosym ../../init.d/sysklogd \
 		"${EPREFIX}/etc/runlevels/default/sysklogd"
 	dosym ../../init.d/cronie \
