@@ -36,7 +36,7 @@ src_install() {
 	doins "${FILESDIR}"/locale.gen
 
 	insinto /etc/env.d
-	doins "{$FILESDIR"}/02locale
+	doins "${FILESDIR}"/02locale
 
 	insinto /etc/sysctl.d
 	newins "${FILESDIR}/sysctl.conf" local.conf
