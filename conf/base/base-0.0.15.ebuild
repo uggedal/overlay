@@ -33,6 +33,10 @@ src_install() {
 	insinto /etc
 	doins "${FILESDIR}"/input.local.rc
 	doins "${FILESDIR}"/logrotate.conf
+	doins "{$FILESDIR"}/locale.gen
+
+	insinto /etc/env.d
+	doins "{$FILESDIR"}/02locale
 
 	insinto /etc/sysctl.d
 	newins "${FILESDIR}/sysctl.conf" local.conf
@@ -43,4 +47,9 @@ src_install() {
 		"${EPREFIX}/etc/runlevels/default/cronie"
 	dosym ../../init.d/chronyd \
 		"${EPREFIX}/etc/runlevels/default/chronyd"
+}
+
+pkg_postinst() {
+	locale-gen || die
+	env-update || die
 }
