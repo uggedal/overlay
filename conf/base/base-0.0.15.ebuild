@@ -33,7 +33,7 @@ src_install() {
 	insinto /etc
 	doins "${FILESDIR}"/input.local.rc
 	doins "${FILESDIR}"/logrotate.conf
-	doins "{$FILESDIR"}/locale.gen
+	doins "${$FILESDIR}"/locale.gen
 
 	insinto /etc/env.d
 	doins "{$FILESDIR"}/02locale
