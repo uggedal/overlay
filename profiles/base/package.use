@@ -4,8 +4,6 @@ app-crypt/gnupg -smartcard
 app-editors/vim -X
 app-misc/tmux vim-syntax
 app-shells/bash -net
-# For python_single_target_python3_8:
-=app-text/asciidoc-9.0.0_rc2 ~amd64
 app-text/hunspell l10n_en
 app-text/xmlto text
 dev-cpp/cairomm X
