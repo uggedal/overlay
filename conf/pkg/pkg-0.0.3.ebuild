@@ -11,6 +11,6 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
-	app-portage/repoman
+	dev-util/pkgcheck
 	dev-util/shellcheck-bin
 "
