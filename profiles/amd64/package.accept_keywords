@@ -3,6 +3,10 @@
 =app-text/asciidoc-9.0.0_rc2 ~amd64
 dev-libs/aml ~amd64
 dev-libs/date ~amd64
+# For python_single_target_python3_8:
+=dev-libs/glib/glib-2.64.4 ~amd64
+# For python_single_target_python3_8:
+=dev-util/ninja/ninja-1.10.0 ~amd64
 gui-apps/grim ~amd64
 gui-apps/slurp ~amd64
 gui-apps/waybar ~amd64
