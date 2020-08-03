@@ -15,7 +15,7 @@ dev-libs/libpcre2 pcre16
 dev-python/pygobject -python_targets_python2_7
 dev-qt/qtgui egl
 dev-util/cmake -ncurses
-dev-vcs/git -python -webdav
+dev-vcs/git -webdav
 gui-apps/waybar network popup tray
 media-gfx/imagemagick hdri png -X
 media-libs/libglvnd X
