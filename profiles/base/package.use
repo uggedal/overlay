@@ -12,6 +12,7 @@ dev-lang/python sqlite
 dev-libs/elfutils -utils
 dev-libs/libdbusmenu gtk3
 dev-libs/libpcre2 pcre16
+dev-python/pip python_targets_python3_8
 dev-python/pygobject -python_targets_python2_7
 dev-qt/qtgui egl
 dev-util/cmake -ncurses
