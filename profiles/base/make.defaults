@@ -22,6 +22,7 @@ USE="
 	pulseaudio
 	truetype
 	unicode
+	vulkan
 	wayland
 
 	png
