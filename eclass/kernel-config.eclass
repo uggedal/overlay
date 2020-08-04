@@ -5,6 +5,7 @@ SLOT="0"
 
 DEPEND="dev-lang/perl
 	sys-devel/bc
+	sys-kernel/genkernel
 	virtual/libelf"
 
 S="${WORKDIR}"
