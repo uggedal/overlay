@@ -39,6 +39,8 @@ CONFIG_RTC_CLASS=y
 
 # Graphics:
 CONFIG_MTRR=y
+CONFIG_AGP=y
+CONFIG_AGP_INTEL=y
 CONFIG_DRM=y
 CONFIG_DRM_FBDEV_EMULATION=y
 # Compile i915 as module for firmware loading to work automatically:
