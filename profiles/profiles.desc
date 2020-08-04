@@ -1,1 +1,2 @@
-amd64	amd64			stable
+amd64	amd64/ryzen		stable
+amd64	amd64/kabylake		stable
