@@ -37,7 +37,6 @@ sys-boot/grub -grub_platforms_pc -fonts -themes -truetype
 sys-fs/cryptsetup -luks1_default
 sys-fs/lvm2 device-mapper-only -thin
 sys-kernel/genkernel -firmware
-sys-kernel/linux-firmware initramfs
 sys-process/cronie -anacron
 sys-process/psmisc -X
 virtual/ffmpeg -X -truetype
