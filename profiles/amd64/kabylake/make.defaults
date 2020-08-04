@@ -1,0 +1,21 @@
+COMMON_FLAGS="-O2 -march=skylake -mabm --param l1-cache-line-size=64 --param l1-cache-size=32 --param l2-cache-size=6144 -pipe"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+RUSTFLAGS="-C target-cpu=skylake"
+
+CPU_FLAGS_X86="aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt sse sse2 sse3 sse4_1 sse4_2 ssse3"
+
+USE="
+	$USE
+
+	video_cards_intel
+	video_cards_i965
+	video_cards_iris
+	-video_cards_amdgpu
+	-video_cards_radeonsi
+	-video_cards_nouveau
+	-video_cards_radeon
+	-video_cards_dummy
+	-video_cards_fbdev
+	-video_cards_vesa
+"
