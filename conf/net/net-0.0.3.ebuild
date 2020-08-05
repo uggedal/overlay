@@ -32,6 +32,8 @@ src_install() {
 		insinto /etc/iwd
 		newins "${FILESDIR}"/iwd.conf main.conf
 
+		newconfd "${FILESDIR}"/iwd.confd iwd
+
 		dosym ../../init.d/iwd \
 			"${EPREFIX}/etc/runlevels/default/iwd"
 	fi
