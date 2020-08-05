@@ -22,6 +22,7 @@ RDEPEND="
 	gui-apps/wl-clipboard
 	gui-wm/sway
 	x11-misc/xdg-utils
+	dev-lang/rust-bin
 	x11-terms/alacritty
 	www-client/firefox-bin
 "
