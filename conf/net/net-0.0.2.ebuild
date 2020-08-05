@@ -10,7 +10,7 @@ LICENSE="CC0-1.0"
 SLOT="0"
 KEYWORDS="amd64"
 IUSE="wired wireless"
-REQUIRED_USE="^^ (wired wireless)"
+REQUIRED_USE="^^ ( wired wireless )"
 
 RDEPEND="
 	wired? ( net-misc/dhcpcd )
