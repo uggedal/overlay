@@ -9,6 +9,7 @@ HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"
 LICENSE="CC0-1.0"
 SLOT="0"
 KEYWORDS="amd64"
+IUSE="vncserver vncclient"
 
 RDEPEND="
 	app-shells/fzy
@@ -18,13 +19,14 @@ RDEPEND="
 	gui-apps/grim
 	gui-apps/slurp
 	gui-apps/waybar
-	gui-apps/wayvnc
 	gui-apps/wl-clipboard
 	gui-wm/sway
 	x11-misc/xdg-utils
 	dev-lang/rust-bin
 	x11-terms/alacritty
 	www-client/firefox-bin
+	vncserver? ( gui-apps/wayvnc )
+	vncclient? ( net-misc/remmina )
 "
 
 S="${WORKDIR}"
