@@ -12,7 +12,7 @@ if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/any1/wlvncc.git"
 else
-	COMMIT="f7aab11128cc707de62bb509939b88021abac5cf"
+	COMMIT="67bd3331e50826a0bf1eb12c7e82b09f2129273e"
 	SRC_URI="https://github.com/any1/wlvncc/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 	S="${WORKDIR}/${PN}-${COMMIT}"
