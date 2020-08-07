@@ -26,7 +26,7 @@ RDEPEND="
 	x11-terms/alacritty
 	www-client/firefox-bin
 	vncserver? ( gui-apps/wayvnc )
-	vncclient? ( net-misc/remmina )
+	vncclient? ( gui-apps/wlvncc )
 "
 
 S="${WORKDIR}"
