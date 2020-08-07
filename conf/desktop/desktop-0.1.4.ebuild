@@ -33,4 +33,8 @@ S="${WORKDIR}"
 
 src_install() {
 	dobin "${FILESDIR}/alacritty_menu"
+
+	if use vncclient; then
+		dobin "${FILESDIR}/vnc"
+	fi
 }
