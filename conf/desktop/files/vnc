@@ -13,12 +13,14 @@ fi
 SSH="ssh $1 -fNL $PORT:$BIND:$PORT"
 $SSH
 
+swaymsg mode '$mode_vnc'
 wlvncc -e tight $BIND $PORT&
 CHLD="$!"
 
 echo CHILDREN "$CHLD"
 
 cleanup() {
+	swaymsg mode default
 	kill $CHLD 2>/dev/null
 	pkill -f "$SSH"
 }
