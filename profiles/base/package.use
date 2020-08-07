@@ -27,7 +27,6 @@ net-mail/mailutils -tcpd
 net-misc/curl -ftp -imap -pop3 -smtp -tftp
 net-misc/iputils -arping
 net-misc/openssh libedit -X
-net-misc/remmina ssh vnc
 sys-apps/fwupd -elogind minimal nvme uefi
 sys-apps/groff -X
 sys-apps/iproute2 -berkdb -iptables
