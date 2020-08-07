@@ -1,2 +1,3 @@
+conf/desktop vncserver
 conf/net wired
 sys-kernel/linux-firmware initramfs
