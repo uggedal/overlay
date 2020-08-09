@@ -15,7 +15,7 @@ start() {
 			--name $RC_SVCNAME \
 			--umask 0002 \
 			--exec /usr/bin/tmux -- \
-				-u2 new-session -d -s weechat weechat -d weechat
+				-u2 new-session -d -s weechat weechat -d /var/lib/weechat
 	eend $?
 }
 
