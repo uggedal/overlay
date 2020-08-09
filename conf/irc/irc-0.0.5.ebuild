@@ -43,6 +43,8 @@ _w_run() {
 pkg_postinst() {
 	_w_set weechat.look.buffer_time_format '%H:%M'
 	_w_set weechat.look.prefix_suffix ''
+	_w_set weechat.look.prefix_align none
+	_w_set weechat.look.align_end_of_lines prefix
 
 	_w_set irc.look.highlight_channel '(?-i)$nick:,(?-i)$nick '
 	_w_set irc.look.server_buffer independent
