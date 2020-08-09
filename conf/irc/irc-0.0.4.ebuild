@@ -36,6 +36,10 @@ _w_set() {
 	weechat-conf set "$@"
 }
 
+_w_run() {
+	weechat-conf run "$@"
+}
+
 pkg_postinst() {
 	_w_set weechat.look.buffer_time_format '%H:%M'
 	_w_set weechat.look.prefix_suffix ''
