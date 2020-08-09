@@ -23,7 +23,7 @@ src_install() {
 	dosym ../../init.d/weechat \
 		"${EPREFIX}/etc/runlevels/default/weechat"
 
-	newbin "${FILESDIR}"/weechat-conf
+	dobin "${FILESDIR}"/weechat-conf
 	insinto /var/lib/weechat
 	newins "${FILESDIR}"/tmux.conf .tmux.conf
 }
