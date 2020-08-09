@@ -18,8 +18,8 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_install() {
-	newinitd "${FILESDIR}"/weechat.initd
+	newinitd "${FILESDIR}"/weechat.initd weechat
 
 	dosym ../../init.d/weechat \
-		"${EPREFIX}/etc/runlevels/default/smartd"
+		"${EPREFIX}/etc/runlevels/default/weechat"
 }
