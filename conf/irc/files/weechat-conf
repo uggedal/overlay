@@ -47,7 +47,7 @@ cmd=$1
 shift
 
 case "$cmd" in
-	has|set)
+	has|set|run)
 		w_$cmd "$@"
 		;;
 esac
