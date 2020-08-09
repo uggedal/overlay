@@ -1,0 +1,28 @@
+#!/sbin/openrc-run
+
+depend() {
+	need localmount net
+}
+
+start() {
+	ebegin "Starting $RC_SVCNAME"
+	env TERM="tmux-256color" \
+		start-stop-daemon \
+			--start \
+			--background \
+			--user $RC_SVCNAME \
+			--env HOME=weechat \
+			--name $RC_SVCNAME \
+			--umask 0002 \
+			--exec /usr/bin/tmux -- \
+				-u2 new-session -d -s weechat weechat -d weechat
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping $RC_SVCNAME"
+
+	echo '*/quit' > weechat/weechat_fifo
+
+	eend $rc
+}
