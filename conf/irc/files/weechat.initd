@@ -22,7 +22,7 @@ start() {
 stop() {
 	ebegin "Stopping $RC_SVCNAME"
 
-	echo '*/quit' > weechat/weechat_fifo
+	echo '*/quit' > /var/lib/weechat/weechat_fifo
 
 	eend $rc
 }
