@@ -52,7 +52,8 @@ pkg_postinst() {
 	_w_set weechat.bar.input.items \
 		'>,[input_search],[input_paste],[scroll],input_text'
 	_w_set weechat.bar.buflist.items buflist
-	_w_set weechat.bar.buflist.separator off
+	_w_set weechat.bar.buflist.separator on
+	_w_set weechat.bar.buflist.conditions '${window.win_width} > 100'
 	_w_set buflist.format.number '${number}${if:${number_displayed}? :}'
 
 	_w_set irc.look.highlight_channel '(?-i)$nick:,(?-i)$nick '
