@@ -11,7 +11,7 @@ start() {
 			--start \
 			--background \
 			--user $RC_SVCNAME \
-			--env HOME=weechat \
+			--env HOME=/var/lib/weechat \
 			--name $RC_SVCNAME \
 			--umask 0002 \
 			--exec /usr/bin/tmux -- \
