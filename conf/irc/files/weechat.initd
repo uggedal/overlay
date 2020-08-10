@@ -1,5 +1,8 @@
 #!/sbin/openrc-run
 
+WEECHAT_HOME=/var/lib/weechat
+RELAY_SOCKET=$WEECHAT_HOME/relay_socket
+
 depend() {
 	need localmount net
 }
@@ -11,18 +14,26 @@ start() {
 			--start \
 			--background \
 			--user $RC_SVCNAME \
-			--env HOME=/var/lib/weechat \
+			--env HOME=$WEECHAT_HOME \
 			--name $RC_SVCNAME \
 			--umask 0002 \
 			--exec /usr/bin/tmux -- \
-				-u2 new-session -d -s weechat weechat -d /var/lib/weechat
+				-u2 new-session -d -s weechat weechat -d $WEECHAT_HOME
+
+	while [ ! -e $RELAY_SOCKET ]; do
+		sleep 1
+	done
+
+	chown weechat:nginx $RELAY_SOCKET
+	chmod g+rw $RELAY_SOCKET
+
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping $RC_SVCNAME"
 
-	echo '*/quit' > /var/lib/weechat/weechat_fifo
+	echo '*/quit' > $WEECHAT_HOME/weechat_fifo
 
 	eend $rc
 }

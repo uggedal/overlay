@@ -70,4 +70,9 @@ pkg_postinst() {
 	_w_set logger.file.mask '$plugin.$name.log'
 	_w_set logger.mask.irc '$server-$channel-%Y-%m.log'
 	_w_set logger.level.irc 1
+
+	if ! _w_has 'unix.weechat = %h/relay_socket' relay; then
+		_w_run '/relay add unix.weechat %h/relay_socket'
+		_w_run '/save'
+	fi
 }
