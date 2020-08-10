@@ -27,6 +27,8 @@ src_install() {
 
 	insinto /etc
 	doins "${FILESDIR}"/tmux.local.conf
+
+	dobin "${FILESDIR}"/irc
 	dobin "${FILESDIR}"/t
 
 	insinto /etc/sudoers.d
