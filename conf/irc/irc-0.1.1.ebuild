@@ -13,6 +13,7 @@ KEYWORDS="amd64"
 RDEPEND="
 	acct-user/weechat
 	net-irc/weechat
+	net-irc/weechat-autosort
 	www-apps/glowing-bear
 "
 
