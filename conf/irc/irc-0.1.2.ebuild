@@ -25,6 +25,9 @@ src_install() {
 	dosym ../../init.d/weechat \
 		"${EPREFIX}/etc/runlevels/default/weechat"
 
+	dosym ../../../../../usr/lib64/weechat/python/autosort.py \
+		"${EPREFIX}/var/lib/weechat/python/autoload/autosort.py"
+
 	dobin "${FILESDIR}"/weechat-conf
 	insinto /var/lib/weechat
 	newins "${FILESDIR}"/tmux.conf .tmux.conf
