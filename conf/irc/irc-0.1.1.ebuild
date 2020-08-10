@@ -77,4 +77,17 @@ pkg_postinst() {
 		_w_run '/relay add unix.weechat %h/relay_socket'
 		_w_run '/save'
 	fi
+
+	# Colors:
+	_w_set weechat.color.separator darkgray
+	_w_set weechat.color.chat_highlight magenta
+	_w_set weechat.color.chat_highlight_bg 'default'
+
+	_w_set buflist.format.buffer_current \
+		'${color:green}${format_number}${indent}${format_name}'
+	_w_set buflist.format.hotlist_highlight '${color:magenta}'
+	_w_set buflist.format.hotlist_low '${color:default}'
+	_w_set buflist.format.hotlist_message '${color:brown}'
+	_w_set buflist.format.hotlist_none '${color:default}'
+	_w_set buflist.format.hotlist_private '${color:blue}'
 }
