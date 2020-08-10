@@ -13,7 +13,7 @@ KEYWORDS="amd64"
 RDEPEND="
 	acct-user/weechat
 	net-irc/weechat
-	www-apps/glowingbear
+	www-apps/glowing-bear
 "
 
 S="${WORKDIR}"
