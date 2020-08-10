@@ -18,7 +18,7 @@ LICENSE="GPL-3+"
 SLOT="0"
 
 RDEPEND="
-	net-irc/weechat[python]
+	net-irc/weechat[python,scripts]
 "
 
 src_install() {
