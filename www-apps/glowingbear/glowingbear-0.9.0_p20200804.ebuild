@@ -16,7 +16,7 @@ else
 	S="${WORKDIR}/${PN}-${COMMIT}"
 fi
 
-LICENSE="GPL-3.0"
+LICENSE="GPL-3+"
 SLOT="0"
 
 src_install() {
