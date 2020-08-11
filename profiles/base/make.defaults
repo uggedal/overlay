@@ -30,6 +30,7 @@ USE="
 	wayland
 
 	png
+	svg
 
 	vaapi
 "
