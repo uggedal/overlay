@@ -89,7 +89,7 @@ pkg_postinst() {
 		'001,002,003,004,005,006,019,040,093,196,220'
 
 	_w_set buflist.format.buffer_current \
-		'${color:green}${format_number}${indent}${format_name}'
+		'${color:,229}${format_number}${indent}${format_name}'
 	_w_set buflist.format.hotlist_highlight '${color:magenta}'
 	_w_set buflist.format.hotlist_low '${color:default}'
 	_w_set buflist.format.hotlist_message '${color:brown}'
