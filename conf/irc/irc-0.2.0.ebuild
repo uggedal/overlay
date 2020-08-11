@@ -74,7 +74,7 @@ pkg_postinst() {
 	fi
 
 	_w_set spell.check.enabled on
-	_w_set spell.check.default_dict en
+	_w_set spell.check.default_dict '"en"'
 
 	_w_set logger.look.backlog 0
 	_w_set logger.file.mask '$plugin.$name.log'
