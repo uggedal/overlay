@@ -73,6 +73,9 @@ pkg_postinst() {
 		_w_run '/save'
 	fi
 
+	_w_set spell.check.enabled on
+	_w_set spell.check.default_dict en
+
 	_w_set logger.look.backlog 0
 	_w_set logger.file.mask '$plugin.$name.log'
 	_w_set logger.mask.irc '$server-$channel-%Y-%m.log'
