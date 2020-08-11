@@ -86,7 +86,7 @@ pkg_postinst() {
 	_w_set weechat.color.chat_highlight red
 	_w_set weechat.color.chat_highlight_bg 229
 	_w_set weechat.color.chat_nick_colors \
-		'018,024,030,036,072,066,060,054,091,097,103,109,145,139,133,127,162,168,174,180,216,210,204,198'
+		'001,002,003,004,005,006,019,040,093,196,220'
 
 	_w_set buflist.format.buffer_current \
 		'${color:green}${format_number}${indent}${format_name}'
