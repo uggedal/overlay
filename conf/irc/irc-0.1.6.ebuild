@@ -58,7 +58,6 @@ pkg_postinst() {
 		'>,[input_search],[input_paste],[scroll],input_text'
 	_w_set weechat.bar.buflist.items buflist
 	_w_set weechat.bar.buflist.separator on
-	_w_set buflist.format.number '${number}${if:${number_displayed}? :}'
 
 	_w_set irc.look.highlight_channel '(?-i)$nick:,(?-i)$nick '
 	_w_set irc.look.server_buffer independent
@@ -83,6 +82,7 @@ pkg_postinst() {
 
 	# Colors:
 	_w_set weechat.color.separator darkgray
+	_w_set weechat.color.chat_time 245
 	_w_set weechat.color.chat_highlight red
 	_w_set weechat.color.chat_highlight_bg 229
 	_w_set weechat.color.chat_nick_colors \
@@ -90,6 +90,7 @@ pkg_postinst() {
 
 	_w_set buflist.format.buffer_current \
 		'${color:,229}${format_number}${indent}${format_name}'
+	_w_set buflist.format.number '${color:245}${number}${if:${number_displayed}?.: }'
 	_w_set buflist.format.hotlist_highlight '${color:magenta}'
 	_w_set buflist.format.hotlist_low '${color:default}'
 	_w_set buflist.format.hotlist_message '${color:brown}'
