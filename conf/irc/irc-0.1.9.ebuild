@@ -14,6 +14,7 @@ RDEPEND="
 	acct-user/weechat
 	net-irc/weechat
 	net-irc/weechat-autosort
+	net-irc/weechat-colorize-nicks
 	www-apps/glowing-bear
 "
 
@@ -27,6 +28,8 @@ src_install() {
 
 	dosym ../../../../../usr/lib64/weechat/python/autosort.py \
 		"${EPREFIX}/var/lib/weechat/python/autoload/autosort.py"
+	dosym ../../../../../usr/lib64/weechat/python/colorize_nicks.py \
+		"${EPREFIX}/var/lib/weechat/python/autoload/colorize_nicks.py"
 
 	dobin "${FILESDIR}"/weechat-conf
 	insinto /var/lib/weechat
