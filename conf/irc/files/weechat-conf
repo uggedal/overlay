@@ -30,7 +30,7 @@ w_set() {
 	fi
 
 	case  "$set_key" in
-		*nicks|*realname|*sasl_username|weechat.bar.buflist.items)
+		*nicks|*realname|*sasl_username|weechat.bar.buflist.items|*default_dict)
 			val="\"$val\""
 			;;
 	esac
