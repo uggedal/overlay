@@ -21,3 +21,6 @@ shopt -s globstar
 # List files in one column, classify file types, print human sizes (when
 # using -l), and list directories before files:
 alias ls='ls -1Fh --group-directories-first'
+
+# Colors for ip:
+alias ip='ip --color=auto'
