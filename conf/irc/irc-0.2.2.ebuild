@@ -94,6 +94,8 @@ pkg_postinst() {
 	_w_set weechat.color.chat_nick_colors \
 		'001,002,003,004,005,006,019,040,093,196,220'
 
+	_w_set buflist.format.buffer \
+		'${format_number}${indent}${format_nick_prefix}${color_hotlist}${format_name}${if:${buffer.hotlist.1|count}? ${color:245}${buffer.hotlist.1|count}}'
 	_w_set buflist.format.buffer_current \
 		'${color:,229}${format_number}${indent}${color:default}${format_name}'
 	_w_set buflist.format.number '${color:245}${number}${if:${number_displayed}?.: }'
