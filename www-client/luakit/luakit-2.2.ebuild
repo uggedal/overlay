@@ -59,6 +59,7 @@ src_install() {
 	sed -i 's/install -m644 luakit.1.gz/install -m644 luakit.1/g' Makefile || die
 
 	emake \
+		LUA_PKG_NAME=$(usex luajit 'luajit' 'lua') \
 		LUA_BIN_NAME=$(usex luajit 'luajit' 'lua') \
 		DESTDIR="${D}" \
 		PREFIX="${EPREFIX}/usr" \
