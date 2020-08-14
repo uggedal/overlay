@@ -41,3 +41,7 @@ src_install() {
 		dobin "${FILESDIR}/vnc"
 	fi
 }
+
+pkg_postinst() {
+	env-update || die
+}
