@@ -33,6 +33,8 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_install() {
+	doenvd "${FILESDIR}"/99local-desktop
+
 	dobin "${FILESDIR}/alacritty_menu"
 
 	if use vncclient; then

@@ -4,6 +4,5 @@ exec alacritty \
 	--class AlacrittyMenu \
 	-d 40 11 \
 	-e /bin/bash -c '
-		export QT_QPA_PLATFORM=wayland
 		compgen -c | sort -u | fzy | xargs -r swaymsg -t command exec
 	'
