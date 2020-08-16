@@ -24,8 +24,8 @@ RDEPEND="
 	x11-misc/xdg-utils
 	dev-lang/rust-bin
 	x11-terms/alacritty
-	www-client/luakit
 	www-client/firefox-bin
+	www-client/qutebrowser
 	vncserver? ( gui-apps/wayvnc )
 	vncclient? ( gui-apps/wlvncc )
 "

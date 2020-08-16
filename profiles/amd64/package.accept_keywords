@@ -6,6 +6,8 @@ dev-libs/date ~amd64
 # For python_single_target_python3_8:
 =dev-libs/glib-2.64.4 ~amd64
 dev-python/pypeg2 ~amd64
+# Unstable qt for patched qtwebengine:
+dev-qt/* ~amd64
 # For python_single_target_python3_8:
 =dev-util/gdbus-codegen-2.64.4 ~amd64
 # For python_single_target_python3_8:
