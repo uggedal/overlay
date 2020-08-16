@@ -20,6 +20,7 @@ dev-qt/qttest ~amd64
 dev-qt/qtwayland ~amd64
 dev-qt/qtwebchannel ~amd64
 dev-qt/qtwebengine ~amd64
+dev-qt/qtwebsockets ~amd64
 dev-qt/qtwidgets ~amd64
 dev-qt/qtxml ~amd64
 # For python_single_target_python3_8:
