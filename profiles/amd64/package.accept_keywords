@@ -18,6 +18,7 @@ dev-qt/qtprintsupport ~amd64
 dev-qt/qtsql ~amd64
 dev-qt/qtwebchannel ~amd64
 dev-qt/qtwebengine ~amd64
+dev-qt/qtwidgets ~amd64
 dev-qt/qtxml ~amd64
 # For python_single_target_python3_8:
 =dev-util/gdbus-codegen-2.64.4 ~amd64
