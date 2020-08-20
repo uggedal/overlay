@@ -1,6 +1,6 @@
 =app-admin/needrestart-3.5 ~amd64
 # For python_single_target_python3_8:
-=app-text/asciidoc-9.0.0_rc2 ~amd64
+=app-text/asciidoc-9.0.2 ~amd64
 dev-libs/aml ~amd64
 dev-libs/date ~amd64
 # For python_single_target_python3_8:
