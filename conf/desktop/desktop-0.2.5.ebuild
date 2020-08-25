@@ -25,7 +25,6 @@ RDEPEND="
 	x11-misc/xdg-utils
 	dev-lang/rust-bin
 	x11-terms/alacritty
-	www-client/firefox-bin
 	www-client/qutebrowser
 	laptop? ( gui-apps/kanshi )
 	vncserver? ( gui-apps/wayvnc )
