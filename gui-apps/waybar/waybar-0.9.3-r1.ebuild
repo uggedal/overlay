@@ -46,6 +46,10 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/813-fmt-crash.patch"
+)
+
 if [[ ${PV} != 9999 ]]; then
 	S="${WORKDIR}/${PN^}-${PV}"
 fi
