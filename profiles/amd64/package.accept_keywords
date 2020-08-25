@@ -28,6 +28,7 @@ dev-qt/qtxml ~amd64
 # For python_single_target_python3_8:
 =dev-util/ninja-1.10.0 ~amd64
 gui-apps/grim ~amd64
+gui-apps/kanshi ~amd64
 gui-apps/slurp ~amd64
 gui-apps/waybar ~amd64
 gui-apps/wayvnc ~amd64
