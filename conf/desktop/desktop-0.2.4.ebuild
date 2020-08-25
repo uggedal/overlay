@@ -12,6 +12,7 @@ KEYWORDS="amd64"
 IUSE="vncserver vncclient laptop"
 
 RDEPEND="
+	app-admin/pass-otp
 	app-shells/fzy
 	media-fonts/dejavu
 	media-fonts/ibm-plex
