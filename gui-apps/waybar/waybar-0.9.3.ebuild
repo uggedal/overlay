@@ -46,10 +46,6 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-PATCHES=(
-	"${FILESDIR}/support-non-nl80211.patch"
-)
-
 if [[ ${PV} != 9999 ]]; then
 	S="${WORKDIR}/${PN^}-${PV}"
 fi
