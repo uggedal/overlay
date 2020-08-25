@@ -9,7 +9,7 @@ HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"
 LICENSE="CC0-1.0"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE="vncserver vncclient"
+IUSE="vncserver vncclient laptop"
 
 RDEPEND="
 	app-shells/fzy
@@ -17,7 +17,6 @@ RDEPEND="
 	media-fonts/ibm-plex
 	media-gfx/imv
 	gui-apps/grim
-	gui-apps/kanshi
 	gui-apps/slurp
 	gui-apps/waybar
 	gui-apps/wl-clipboard
@@ -27,6 +26,7 @@ RDEPEND="
 	x11-terms/alacritty
 	www-client/firefox-bin
 	www-client/qutebrowser
+	laptop? ( gui-apps/kanshi )
 	vncserver? ( gui-apps/wayvnc )
 	vncclient? ( gui-apps/wlvncc )
 "
