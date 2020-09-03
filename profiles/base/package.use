@@ -28,7 +28,7 @@ media-libs/libglvnd X
 media-libs/libsdl2 gles2
 media-libs/libvpx svc
 media-sound/pulseaudio -tcpd -asyncns
-media-video/ffmpeg -X -opengl -network -truetype -fftools_aviocat -fftools_cws2fws -fftools_ffescape -fftools_ffeval -fftools_ffhash -fftools_fourcc2pixfmt -fftools_graph2dot -fftools_ismindex -fftools_pktdumper -fftools_qt-faststart -fftools_sidxindex -fftools_trasher
+media-video/ffmpeg -X -opengl -truetype -fftools_aviocat -fftools_cws2fws -fftools_ffescape -fftools_ffeval -fftools_ffhash -fftools_fourcc2pixfmt -fftools_graph2dot -fftools_ismindex -fftools_pktdumper -fftools_qt-faststart -fftools_sidxindex -fftools_trasher
 media-video/mpv libmpv -X -xv
 net-irc/weechat -charset -exec -fset -trigger -xfer -perl
 net-mail/mailutils -tcpd
