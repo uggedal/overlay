@@ -18,7 +18,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="+man mpd network popup pulseaudio systemd tray +udev"
+IUSE="+man mpd network popup pulseaudio rfkill systemd tray +udev"
 
 BDEPEND="
 	virtual/pkgconfig
@@ -48,6 +48,7 @@ RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}/813-fmt-crash.patch"
+	"${FILESDIR}/823-optional-rfkill.patch"
 )
 
 if [[ ${PV} != 9999 ]]; then
@@ -61,6 +62,7 @@ src_configure() {
 		$(meson_feature network libnl)
 		$(meson_feature popup gtk-layer-shell)
 		$(meson_feature pulseaudio)
+		$(meson_feature rfkill rfkill)
 		$(meson_feature systemd)
 		$(meson_feature tray dbusmenu-gtk)
 		$(meson_feature udev libudev)

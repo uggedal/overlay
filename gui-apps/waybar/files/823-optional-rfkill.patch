@@ -1,0 +1,53 @@
+From fdfb60c633681908e81337ce793350588add2478 Mon Sep 17 00:00:00 2001
+From: wjoe <you@example.com>
+Date: Fri, 14 Aug 2020 20:56:45 +0200
+Subject: [PATCH] meson feature: make rfkill optional
+
+---
+ meson.build       | 12 ++++++++++--
+ meson_options.txt |  1 +
+ 2 files changed, 11 insertions(+), 2 deletions(-)
+
+diff --git a/meson.build b/meson.build
+index 56b45be8..16da9575 100644
+--- a/meson.build
++++ b/meson.build
+@@ -137,12 +137,10 @@ if is_linux
+     add_project_arguments('-DHAVE_MEMORY_LINUX', language: 'cpp')
+     src_files += files(
+         'src/modules/battery.cpp',
+-        'src/modules/bluetooth.cpp',
+         'src/modules/cpu/common.cpp',
+         'src/modules/cpu/linux.cpp',
+         'src/modules/memory/common.cpp',
+         'src/modules/memory/linux.cpp',
+-        'src/util/rfkill.cpp'
+     )
+ elif is_dragonfly or is_freebsd or is_netbsd or is_openbsd
+     add_project_arguments('-DHAVE_CPU_BSD', language: 'cpp')
+@@ -207,6 +205,16 @@ if gtk_layer_shell.found()
+     add_project_arguments('-DHAVE_GTK_LAYER_SHELL', language: 'cpp')
+ endif
+ 
++if get_option('rfkill').enabled()
++    if is_linux
++        add_project_arguments('-DWANT_RFKILL', language: 'cpp')
++        src_files += files(
++            'src/modules/bluetooth.cpp',
++            'src/util/rfkill.cpp'
++        )
++    endif
++endif
++
+ subdir('protocol')
+ 
+ executable(
+diff --git a/meson_options.txt b/meson_options.txt
+index a44ff648..de47da74 100644
+--- a/meson_options.txt
++++ b/meson_options.txt
+@@ -7,3 +7,4 @@ option('dbusmenu-gtk', type: 'feature', value: 'auto', description: 'Enable supp
+ option('man-pages', type: 'feature', value: 'auto', description: 'Generate and install man pages')
+ option('mpd', type: 'feature', value: 'auto', description: 'Enable support for the Music Player Daemon')
+ option('gtk-layer-shell', type: 'feature', value: 'auto', description: 'Use gtk-layer-shell library for popups support')
++option('rfkill', type: 'feature', value: 'auto', description: 'Enable support for RFKILL')
