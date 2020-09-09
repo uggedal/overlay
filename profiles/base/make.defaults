@@ -13,9 +13,6 @@ USE="
 
 	-ruby_targets_ruby24
 
-	elogind
-	udev
-
 	acpi
 	cairo
 	dri
