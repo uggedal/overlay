@@ -16,7 +16,6 @@ RDEPEND="
 	app-admin/ps_mem
 	app-portage/gentoolkit
 	app-portage/smart-live-rebuild
-	net-misc/chrony
 	sys-process/cronie
 	sys-process/htop
 "
@@ -41,8 +40,9 @@ src_install() {
 
 	dosym ../../init.d/cronie \
 		"${EPREFIX}/etc/runlevels/default/cronie"
-	dosym ../../init.d/chronyd \
-		"${EPREFIX}/etc/runlevels/default/chronyd"
+
+	dosym ../../../../lib/systemd/system/systemd-timedated.service \
+		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-timedated.service"
 }
 
 pkg_postinst() {
