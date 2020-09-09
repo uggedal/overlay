@@ -41,8 +41,8 @@ src_install() {
 	dosym ../../init.d/cronie \
 		"${EPREFIX}/etc/runlevels/default/cronie"
 
-	dosym ../../../../lib/systemd/system/systemd-timedated.service \
-		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-timedated.service"
+	dosym ../../../../lib/systemd/system/systemd-timesyncd.service \
+		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-timesyncd.service"
 }
 
 pkg_postinst() {
