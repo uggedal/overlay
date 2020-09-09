@@ -14,7 +14,6 @@ RDEPEND="
 	app-admin/logrotate
 	app-admin/needrestart
 	app-admin/ps_mem
-	app-admin/sysklogd
 	app-portage/gentoolkit
 	app-portage/smart-live-rebuild
 	net-misc/chrony
@@ -40,8 +39,6 @@ src_install() {
 	insinto /etc/sysctl.d
 	newins "${FILESDIR}/sysctl.conf" local.conf
 
-	dosym ../../init.d/sysklogd \
-		"${EPREFIX}/etc/runlevels/default/sysklogd"
 	dosym ../../init.d/cronie \
 		"${EPREFIX}/etc/runlevels/default/cronie"
 	dosym ../../init.d/chronyd \
