@@ -26,15 +26,15 @@ src_install() {
 	fi
 
 	if use wireless; then
-		insinto /etc
-		doins "${FILESDIR}"/resolv.conf
+		dosym ..//run/systemd/resolve/stub-resolv.conf \
+			"${EPREFIX}/etc/resolv.conf"
+		dosym ../../../../lib/systemd/system/systemd-resolved.service \
+			"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-resolved.service"
 
 		insinto /etc/iwd
 		newins "${FILESDIR}"/iwd.conf main.conf
 
-		newconfd "${FILESDIR}"/iwd.confd iwd
-
-		dosym ../../init.d/iwd \
-			"${EPREFIX}/etc/runlevels/default/iwd"
+		dosym ../../../../lib/systemd/system/iwd.service \
+			"${EPREFIX}/etc/systemd/system/multi-user.target.wants/iwd.service"
 	fi
 }
