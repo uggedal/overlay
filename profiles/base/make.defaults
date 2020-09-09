@@ -39,6 +39,4 @@ FEATURES="nodoc noinfo"
 
 INSTALL_MASK="
 	${INSTALL_MASK}
-	/lib/systemd
-	/usr/lib/systemd
 "
