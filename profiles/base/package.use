@@ -1,3 +1,4 @@
+app-admin/logrotate -cron
 app-admin/sudo -sendmail
 app-crypt/gnupg -smartcard
 app-editors/vim -X
