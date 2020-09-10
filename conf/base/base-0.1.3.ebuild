@@ -42,6 +42,9 @@ src_install() {
 
 	dosym ../../../../lib/systemd/system/logrotate.timer \
 		"${EPREFIX}/etc/systemd/system/timers.target.wants/logrotate.timer"
+
+	dosym ../../../../lib/systemd/system/man-db.timer \
+		"${EPREFIX}/etc/systemd/system/timers.target.wants/man-db.timer"
 }
 
 pkg_postinst() {
