@@ -39,6 +39,9 @@ src_install() {
 
 	dosym ../../../../lib/systemd/system/systemd-timesyncd.service \
 		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-timesyncd.service"
+
+	dosym ../../../../lib/systemd/system/logrotate.timer \
+		"${EPREFIX}/etc/systemd/system/timers.target.wants/logrotate.timer"
 }
 
 pkg_postinst() {
