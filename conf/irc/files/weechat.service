@@ -7,7 +7,9 @@ Type=forking
 User=weechat
 Group=weechat
 UMask=0002
+Environment="RELAY_SOCKET=/var/lib/weechat/relay_socket"
 ExecStart=/usr/bin/tmux -u2 new-session -d -s weechat -- weechat -d /var/lib/weechat
+ExecStartPost=/bin/sh -c 'while [ ! -e $RELAY_SOCKET ]; do sleep 1; done; chown weechat:nginx $RELAY_SOCKET; chmod g+rw $RELAY_SOCKET'
 Restart=always
 
 [Install]
