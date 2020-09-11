@@ -24,6 +24,6 @@ src_install() {
 	insinto /etc
 	doins "${FILESDIR}"/smartd.conf
 
-	dosym ../../init.d/smartd \
-		"${EPREFIX}/etc/runlevels/default/smartd"
+	dosym ../../../../lib/systemd/system/smartd.service \
+		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/smartd.service"
 }
