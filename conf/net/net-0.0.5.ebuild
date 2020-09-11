@@ -13,7 +13,6 @@ IUSE="wired wireless"
 REQUIRED_USE="^^ ( wired wireless )"
 
 RDEPEND="
-	wired? ( net-misc/dhcpcd )
 	wireless? ( net-wireless/iwd )
 "
 
@@ -21,8 +20,11 @@ S="${WORKDIR}"
 
 src_install() {
 	if use wired; then
-		dosym ../../init.d/dhcpcd \
-			"${EPREFIX}/etc/runlevels/default/dhcpcd"
+		insinto /etc/systemd/network
+		doins "${FILESDIR}/wired.network"
+
+		dosym ../../../../lib/systemd/system/systemd-networkd.service \
+			"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-networkd.service"
 	fi
 
 	if use wireless; then
