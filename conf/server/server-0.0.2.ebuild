@@ -17,6 +17,6 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_install() {
-	dosym ../../init.d/sshd \
-		"${EPREFIX}/etc/runlevels/default/sshd"
+	dosym ../../../../lib/systemd/system/sshd.service \
+		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/sshd.service"
 }
