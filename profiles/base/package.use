@@ -39,8 +39,7 @@ sys-apps/fwupd -systemd minimal nvme uefi
 sys-apps/groff -X
 sys-apps/iproute2 -berkdb -iptables
 sys-apps/net-tools -arp
-sys-apps/openrc -netifrc sysv-utils
-sys-apps/systemd cryptsetup dns-over-tls policykit -gcrypt -sysv-utils
+sys-apps/systemd cryptsetup dns-over-tls policykit sysv-utils -gcrypt
 sys-apps/util-linux -cramfs
 sys-boot/grub -grub_platforms_pc -fonts -themes -truetype
 sys-fs/cryptsetup -luks1_default
