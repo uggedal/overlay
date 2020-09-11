@@ -63,8 +63,8 @@ deploy_cert() {
 	local CHAINFILE=$5
 	local TIMESTAMP="$6"
 
-	if [ -e /etc/runlevels/default/nginx ]; then
-		/etc/init.d/nginx reload
+	if systemctl is-active -q nginx; then
+		systemctl reload nginx
 	fi
 }
 

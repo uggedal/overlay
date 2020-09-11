@@ -31,8 +31,8 @@ src_install() {
 	doins "${FILESDIR}"/conf.d/site.conf.j2
 	doins "${FILESDIR}"/conf.d/site.passwd.j2
 
-	dosym ../../init.d/nginx \
-		"${EPREFIX}/etc/runlevels/default/nginx"
+	dosym ../../../../lib/systemd/system/nginx.service \
+		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/nginx.service"
 
 	insinto /etc/dehydrated
 	doins "${FILESDIR}"/dehydrated/config.j2
