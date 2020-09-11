@@ -3,6 +3,8 @@
 
 EAPI=7
 
+inherit systemd
+
 DESCRIPTION="Deps and config for irc"
 HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"
 
@@ -21,10 +23,9 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_install() {
-	newinitd "${FILESDIR}"/weechat.initd weechat
-
-	dosym ../../init.d/weechat \
-		"${EPREFIX}/etc/runlevels/default/weechat"
+	systemd_dounit "${FILESDIR}"/weechat.service
+	dosym ../../../../lib/systemd/system/weechat.service \
+		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/weechat.service"
 
 	dosym ../../../../../usr/lib64/weechat/python/autosort.py \
 		"${EPREFIX}/var/lib/weechat/python/autoload/autosort.py"
