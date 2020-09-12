@@ -39,10 +39,10 @@ src_install() {
 	insinto /etc/sysctl.d
 	newins "${FILESDIR}/sysctl.conf" local.conf
 
-	systemd_enable_service systemd-timesyncd.service multi-user.target
+	systemd_enable_service multi-user.target systemd-timesyncd.service
 
-	systemd_enable_service logrotate.timer timers.target
-	systemd_enable_service man-db.timer timers.target
+	systemd_enable_service timers.target logrotate.timer
+	systemd_enable_service timers.target man-db.timer
 }
 
 
