@@ -3,6 +3,8 @@
 
 EAPI=7
 
+inherit systemd
+
 DESCRIPTION="Deps and config for all environments"
 HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"
 
@@ -37,11 +39,11 @@ src_install() {
 	insinto /etc/sysctl.d
 	newins "${FILESDIR}/sysctl.conf" local.conf
 
-	systemd_enable_service systemd-timesyncd.service multi-user.target.wants
+	systemd_enable_service systemd-timesyncd.service multi-user.target
 
-	systemd_enable_service logrotate.timer timers.target.wants
-	systemd_enable_service man-db.timer timers.target.wants
-}
+	systemd_enable_service logrotate.timer timers.target
+	systemd_enable_service man-db.timer timers.target
+
 
 pkg_postinst() {
 	locale-gen || die
