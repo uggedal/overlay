@@ -37,14 +37,10 @@ src_install() {
 	insinto /etc/sysctl.d
 	newins "${FILESDIR}/sysctl.conf" local.conf
 
-	dosym ../../../../lib/systemd/system/systemd-timesyncd.service \
-		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-timesyncd.service"
+	systemd_enable_service systemd-timesyncd.service multi-user.target.wants
 
-	dosym ../../../../lib/systemd/system/logrotate.timer \
-		"${EPREFIX}/etc/systemd/system/timers.target.wants/logrotate.timer"
-
-	dosym ../../../../lib/systemd/system/man-db.timer \
-		"${EPREFIX}/etc/systemd/system/timers.target.wants/man-db.timer"
+	systemd_enable_service logrotate.timer timers.target.wants
+	systemd_enable_service man-db.timer timers.target.wants
 }
 
 pkg_postinst() {
