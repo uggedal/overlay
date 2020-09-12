@@ -43,6 +43,7 @@ src_install() {
 
 	systemd_enable_service logrotate.timer timers.target
 	systemd_enable_service man-db.timer timers.target
+}
 
 
 pkg_postinst() {
