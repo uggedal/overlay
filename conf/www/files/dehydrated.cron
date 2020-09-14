@@ -1,5 +1,0 @@
-#!/bin/sh
-
-dehydrated -c 2>&1 | ts %FT%T%z >> /var/log/dehydrated.log
-
-grep "^$(date +%Y-%m-%d).*ERROR" /var/log/dehydrated.log || :

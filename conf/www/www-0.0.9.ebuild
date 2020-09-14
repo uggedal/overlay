@@ -3,6 +3,8 @@
 
 EAPI=7
 
+inherit systemd
+
 DESCRIPTION=""
 DESCRIPTION="Deps and config for www servers"
 HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"
@@ -14,7 +16,6 @@ KEYWORDS="amd64"
 RDEPEND="
 	app-crypt/dehydrated
 	app-misc/jq
-	sys-apps/moreutils
 	www-servers/nginx
 "
 
@@ -41,6 +42,8 @@ src_install() {
 	insinto /etc/dehydrated/hooks
 	doins "${FILESDIR}"/dehydrated/hooks/cf.sh.j2
 
-	exeinto /etc/cron.daily
-	newexe "${FILESDIR}"/dehydrated.cron dehydrated
+	systemd_dounit "${FILESDIR}"/dehydrated.service
+	systemd_dounit "${FILESDIR}"/dehydrated.timer
+	dosym ../../../../lib/systemd/system/dehydrated.timer \
+		"${EPREFIX}/etc/systemd/system/timers.target.wants/dehydrated.timer"
 }
