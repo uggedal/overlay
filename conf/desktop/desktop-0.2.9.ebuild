@@ -3,6 +3,8 @@
 
 EAPI=7
 
+inherit systemd
+
 DESCRIPTION="Deps and config for desktop environment"
 HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"
 
@@ -36,6 +38,8 @@ src_install() {
 	doenvd "${FILESDIR}"/99local-desktop
 
 	dobin "${FILESDIR}/alacritty_menu"
+
+	systemd_douserunit "${FILESDIR}/wayland-session.target"
 
 	if use vncclient; then
 		dobin "${FILESDIR}/vnc"
