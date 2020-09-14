@@ -3,6 +3,8 @@
 
 EAPI=7
 
+inherit systemd
+
 DESCRIPTION=""
 DESCRIPTION="Deps and config for backup"
 HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"
@@ -21,7 +23,9 @@ S="${WORKDIR}"
 src_install() {
 	insinto /usr/share/backup
 	doins "${FILESDIR}/restic-backup.j2"
-	doins "${FILESDIR}/restic-backup-cron.j2"
+
+	systemd_dounit "${FILESDIR}/restic-backup@.service"
+	systemd_dounit "${FILESDIR}/restic-backup@.timer"
 
 	keepdir /var/log/backup
 	keepdir /var/backups/cache
