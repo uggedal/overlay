@@ -4,6 +4,7 @@ ConditionACPower=true
 
 [Service]
 Type=oneshot
+User=root
 ExecStart=/usr/sbin/restic-backup-%i
 
 Nice=19
