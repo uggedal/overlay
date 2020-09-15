@@ -12,6 +12,7 @@ USE="
 	python_single_target_python3_8
 
 	-ruby_targets_ruby24
+	-ruby_targets_ruby25
 
 	acpi
 	cairo
