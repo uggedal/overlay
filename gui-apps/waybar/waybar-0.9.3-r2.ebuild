@@ -15,32 +15,37 @@ else
 	SRC_URI="https://github.com/Alexays/${PN^}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
 fi
+S="${WORKDIR}/${PN^}-${PV}"
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="+man mpd network popup pulseaudio rfkill systemd tray +udev"
+IUSE="mpd network popups pulseaudio rfkill systemd tray +udev"
 
 BDEPEND="
+	>=app-text/scdoc-1.9.2
 	virtual/pkgconfig
-	man? ( >=app-text/scdoc-1.9.2 )
 "
 
 DEPEND="
 	dev-cpp/gtkmm:3.0[X]
-	dev-libs/date:=
 	dev-libs/jsoncpp:=
 	dev-libs/libinput:=
 	dev-libs/libsigc++:2
 	>=dev-libs/libfmt-5.3.0:=
 	>=dev-libs/spdlog-1.3.1:=
+	dev-libs/date:=
 	dev-libs/wayland
 	dev-libs/wayland-protocols
 	gui-libs/wlroots
+	x11-libs/gtk+:3[wayland]
 	mpd? ( media-libs/libmpdclient )
 	network? ( dev-libs/libnl:3 )
-	popup? ( gui-libs/gtk-layer-shell )
+	popups? ( gui-libs/gtk-layer-shell )
 	pulseaudio? ( media-sound/pulseaudio )
-	tray? ( dev-libs/libdbusmenu[gtk3] )
+	tray? (
+		dev-libs/libdbusmenu[gtk3]
+		dev-libs/libappindicator
+	)
 	udev? ( virtual/libudev:= )
 "
 
@@ -51,13 +56,8 @@ PATCHES=(
 	"${FILESDIR}/823-optional-rfkill.patch"
 )
 
-if [[ ${PV} != 9999 ]]; then
-	S="${WORKDIR}/${PN^}-${PV}"
-fi
-
 src_configure() {
 	local emesonargs=(
-		$(meson_feature man man-pages)
 		$(meson_feature mpd)
 		$(meson_feature network libnl)
 		$(meson_feature popup gtk-layer-shell)
