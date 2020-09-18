@@ -60,7 +60,7 @@ src_configure() {
 	local emesonargs=(
 		$(meson_feature mpd)
 		$(meson_feature network libnl)
-		$(meson_feature popup gtk-layer-shell)
+		$(meson_feature popups gtk-layer-shell)
 		$(meson_feature pulseaudio)
 		$(meson_feature rfkill rfkill)
 		$(meson_feature systemd)
