@@ -18,7 +18,7 @@ dev-python/pygobject -python_targets_python2_7
 dev-qt/qtgui egl
 dev-util/cmake -ncurses
 dev-vcs/git -webdav
-gui-apps/waybar network popup tray
+gui-apps/waybar network popups tray
 media-gfx/imagemagick hdri png -X
 media-libs/libglvnd X
 media-libs/libsdl2 gles2
