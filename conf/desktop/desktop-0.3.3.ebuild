@@ -42,7 +42,6 @@ src_install() {
 
 	dobin "${FILESDIR}/alacritty_menu"
 
-	systemd_douserunit "${FILESDIR}/wayland-session.target"
 	systemd_douserunit "${FILESDIR}/swayidle.service"
 
 	if use vncserver; then

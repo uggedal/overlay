@@ -1,8 +1,8 @@
 [Unit]
 Description=VNC server for wlroots compositors
 Documentation=https://github.com/any1/wayvnc
-PartOf=wayland-session.target
-After=wayland-session.target
+PartOf=graphical-session.target
+After=graphical-session.target
 
 [Service]
 Type=simple
@@ -10,4 +10,4 @@ ExecStart=/usr/bin/wayvnc
 Restart=on-failure
 
 [Install]
-WantedBy=wayland-session.target
+WantedBy=graphical-session.target

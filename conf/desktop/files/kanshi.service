@@ -1,8 +1,8 @@
 [Unit]
 Description=Dynamic display configuration
 Documentation=https://github.com/emersion/kanshi
-PartOf=wayland-session.target
-After=wayland-session.target
+PartOf=graphical-session.target
+After=graphical-session.target
 
 [Service]
 Type=simple
@@ -10,4 +10,4 @@ ExecStart=/usr/bin/kanshi
 Restart=on-failure
 
 [Install]
-WantedBy=wayland-session.target
+WantedBy=graphical-session.target
