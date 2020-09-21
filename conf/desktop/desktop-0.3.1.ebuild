@@ -50,7 +50,7 @@ src_install() {
 		dobin "${FILESDIR}/vnc"
 	fi
 
-	if use laptop then;
+	if use laptop; then
 		systemd_douserunit "${FILESDIR}/kanshi.service"
 	fi
 }
