@@ -27,7 +27,10 @@ RDEPEND="
 	dev-lang/rust-bin
 	x11-terms/alacritty
 	www-client/firefox-bin
-	laptop? ( gui-apps/kanshi )
+	laptop? (
+		dev-libs/light
+		gui-apps/kanshi
+	)
 	vncserver? ( gui-apps/wayvnc )
 	vncclient? ( gui-apps/wlvncc )
 "
