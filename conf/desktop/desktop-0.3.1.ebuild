@@ -49,6 +49,10 @@ src_install() {
 	if use vncclient; then
 		dobin "${FILESDIR}/vnc"
 	fi
+
+	if use laptop then;
+		systemd_douserunit "${FILESDIR}/kanshi.service"
+	fi
 }
 
 pkg_postinst() {
