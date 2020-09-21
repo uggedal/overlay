@@ -42,6 +42,10 @@ src_install() {
 	systemd_douserunit "${FILESDIR}/wayland-session.target"
 	systemd_douserunit "${FILESDIR}/swayidle.service"
 
+	if use vncserver; then
+		systemd_douserunit "${FILESDIR}/wayvnc.service"
+	fi
+
 	if use vncclient; then
 		dobin "${FILESDIR}/vnc"
 	fi
