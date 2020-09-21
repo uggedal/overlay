@@ -51,11 +51,6 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-PATCHES=(
-	"${FILESDIR}/813-fmt-crash.patch"
-	"${FILESDIR}/823-optional-rfkill.patch"
-)
-
 src_configure() {
 	local emesonargs=(
 		$(meson_feature mpd)
