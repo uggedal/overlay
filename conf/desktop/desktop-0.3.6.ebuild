@@ -26,6 +26,7 @@ RDEPEND="
 	gui-wm/sway
 	x11-misc/xdg-utils
 	dev-lang/rust-bin
+	x11-libs/libnotify
 	x11-terms/alacritty
 	www-client/firefox-bin
 	laptop? (
