@@ -19,6 +19,7 @@ RDEPEND="
 	media-fonts/ibm-plex
 	media-gfx/imv
 	gui-apps/grim
+	gui-apps/mako
 	gui-apps/slurp
 	gui-apps/waybar
 	gui-apps/wl-clipboard
