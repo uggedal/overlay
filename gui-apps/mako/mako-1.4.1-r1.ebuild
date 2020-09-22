@@ -44,7 +44,7 @@ BDEPEND="
 "
 
 PATCHES=(
-	"240-systemd-service.patch"
+	"${FILESDIR}/240-systemd-service.patch"
 )
 
 src_configure() {
