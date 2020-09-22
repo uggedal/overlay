@@ -3,6 +3,7 @@ dev-libs/aml ~amd64
 dev-libs/date ~amd64
 dev-libs/light ~amd64
 dev-python/pypeg2 ~amd64
+gui-apps/gammastep ~amd64
 gui-apps/grim ~amd64
 gui-apps/kanshi ~amd64
 gui-apps/slurp ~amd64
