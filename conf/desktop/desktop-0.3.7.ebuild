@@ -18,6 +18,7 @@ RDEPEND="
 	media-fonts/dejavu
 	media-fonts/ibm-plex
 	media-gfx/imv
+	gui-apps/gammastep
 	gui-apps/grim
 	gui-apps/mako
 	gui-apps/slurp
