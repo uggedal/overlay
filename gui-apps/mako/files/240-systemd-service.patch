@@ -79,7 +79,7 @@ index 67ecd4a..1cd034a 100644
 +  )
 +endif
 +
- scdoc = dependency('scdoc', required: get_option('man-pages'), version: '>= 1.9.7')
+ scdoc = find_program('scdoc', required: get_option('man-pages'))
  
  if scdoc.found()
 diff --git a/meson_options.txt b/meson_options.txt
