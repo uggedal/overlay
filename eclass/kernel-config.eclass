@@ -3,11 +3,6 @@ HOMEPAGE="https://github.com/uggedal/overlay"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="dev-lang/perl
-	sys-devel/bc
-	sys-kernel/genkernel
-	virtual/libelf"
-
 S="${WORKDIR}"
 
 EXPORT_FUNCTIONS src_configure src_install pkg_postinst
@@ -79,50 +74,6 @@ kernel-config_src_configure() {
 }
 
 kernel-config_src_install() {
-	insinto /etc/kernels
-	newins base_config "${P}"
-
-	insinto /etc
-	doins "${FILESDIR}/genkernel.conf"
-}
-
-kernel-config_pkg_postinst() {
-	local c errors
-	local cfg="${EROOT}/etc/kernels/${P}"
-	local kern="${EROOT}/usr/src/linux"
-	local _arch=$ARCH
-	unset ARCH
-
-	cd "${kern}" || die "No kernel source in ${kern}"
-
-	cp -f .config config_orig
-
-	cp "${cfg}" .config
-	yes "" | emake -j1 -s oldconfig || die "Unable to make oldconfig"
-
-	# Check that all wanted config options were used:
-	for c in $(grep '^CONFIG_.*=[ym]$' "${cfg}"); do
-		if ! grep -q "^$c\$" .config; then
-			ewarn "Missing config: $c"
-			errors=yes
-		fi
-	done
-
-	# Check that all unwanted config options were unset:
-	for c in $(grep '^CONFIG_.*=n$' /etc/kernels/"${cfg}"); do
-		if ! grep -q "^# ${c%=*} is not set\$" .config; then
-			ewarn "Unwanted config: $c"
-			errors=yes
-		fi
-	done
-
-	cp -f config_orig .config
-
-	if [ "$errors" = yes ]; then
-		die "Aborted due to errors config options"
-	fi
-
-	ewarn "Config passed sanity checks"
-
-	ARCH=$_arch
+	insinto /etc/portage/savedconfig/sys-kernel
+	newins base_config gentoo-kernel
 }
