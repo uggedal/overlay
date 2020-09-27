@@ -5,7 +5,7 @@ SLOT="0"
 
 S="${WORKDIR}"
 
-EXPORT_FUNCTIONS src_configure src_install pkg_postinst
+EXPORT_FUNCTIONS src_configure src_install
 
 K_KERNELCFG_BASE_CONFIG="
 	# Base:
