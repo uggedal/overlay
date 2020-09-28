@@ -46,6 +46,7 @@ CONFIG_DRM_FBDEV_EMULATION=y
 # Compile i915 as module for firmware loading to work automatically:
 CONFIG_DRM_I915=m
 CONFIG_CHECKPOINT_RESTORE=y
+CONFIG_FB_EFI=y
 
 # Sound:
 CONFIG_SOUND=y
