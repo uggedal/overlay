@@ -18,12 +18,12 @@ RDEPEND="
 	media-fonts/dejavu
 	media-fonts/ibm-plex
 	media-gfx/imv
-	gui-apps/gammastep
 	gui-apps/grim
 	gui-apps/mako
 	gui-apps/slurp
 	gui-apps/waybar
 	gui-apps/wl-clipboard
+	gui-apps/wlsunset
 	gui-wm/sway
 	x11-misc/xdg-utils
 	dev-lang/rust-bin
