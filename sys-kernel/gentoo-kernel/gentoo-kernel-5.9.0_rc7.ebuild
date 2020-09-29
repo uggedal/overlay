@@ -132,3 +132,10 @@ src_prepare() {
 	)
 	sed -i "${config_tweaks[@]}" .config || die
 }
+
+src_install() {
+	kernel-build_src_install
+
+	# Fix /lib/modules/_rcX -> /lib/modules/rc-X:
+	mv "${D}/lib/modules/${PV}${KV_LOCALVERSION}" "${D}/lib/modules/${MY_PV}"
+}
