@@ -77,8 +77,7 @@ CONFIG_SND_HDA_CODEC_HDMI=m
 CONFIG_HIGH_RES_TIMERS=y
 
 # Net:
-# Disabled until upstream get support for RTL8125B (5.9/10 timeline)
-# CONFIG_R8169=m
+CONFIG_R8169=m
 
 # USB:
 CONFIG_USB=y
