@@ -132,10 +132,3 @@ src_prepare() {
 	)
 	sed -i "${config_tweaks[@]}" .config || die
 }
-
-pkg_postinst() {
-	kernel-build_pkg_postinst
-
-	# Clenaup /lib/modules/_rcX at end (needed for dracut run)
-	rm -r "${EROOT}/lib/modules/${ver}"
-}
