@@ -139,6 +139,8 @@ src_install() {
 	# Fix /lib/modules/_rcX -> /lib/modules/rc-X:
 	local ver="${PV}${KV_LOCALVERSION}"
 	rm -r "${D}/lib/modules/${ver}"
+	rm "${D}/lib/modules/${MY_PV}/build"
+	rm "${D}/lib/modules/${MY_PV}/source"
 	dosym ../../../usr/src/linux-${ver} /lib/modules/${MY_PV}/build
 	dosym ../../../usr/src/linux-${ver} /lib/modules/${MY_PV}/source
 }
