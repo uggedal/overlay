@@ -31,4 +31,5 @@ DEPEND="${RDEPEND}"
 BDEPEND="
 	virtual/pkgconfig
 	dev-libs/wayland-protocols
+	app-text/scdoc
 "
