@@ -5,7 +5,7 @@ EAPI=7
 
 inherit kernel-build
 
-MY_PV=$(ver_cut 1-2)-$(ver_cut 3-4)
+MY_PV=$(ver_cut 1-2)-$(ver_cut 4-5)
 GENPATCHES_P=genpatches-5.8-1
 # https://koji.fedoraproject.org/koji/packageinfo?packageID=8
 CONFIG_VER=5.8.5
