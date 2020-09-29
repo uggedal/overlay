@@ -133,14 +133,9 @@ src_prepare() {
 	sed -i "${config_tweaks[@]}" .config || die
 }
 
-src_install() {
-	kernel-build_src_install
+pkg_postinst() {
+	kernel-build_pkg_postinst
 
-	# Fix /lib/modules/_rcX -> /lib/modules/rc-X:
-	local ver="${PV}${KV_LOCALVERSION}"
-	rm -r "${D}/lib/modules/${ver}"
-	rm "${D}/lib/modules/${MY_PV}/build"
-	rm "${D}/lib/modules/${MY_PV}/source"
-	dosym ../../../usr/src/linux-${ver} /lib/modules/${MY_PV}/build
-	dosym ../../../usr/src/linux-${ver} /lib/modules/${MY_PV}/source
+	# Clenaup /lib/modules/_rcX at end (needed for dracut run)
+	rm -r "${EROOT}/lib/modules/${ver}"
 }
