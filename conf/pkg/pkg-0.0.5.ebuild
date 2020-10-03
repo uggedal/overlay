@@ -19,5 +19,5 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_install() {
-	dobin "${FILESDIR}"/ebump
+	dobin "${FILESDIR}"/eincr
 }
