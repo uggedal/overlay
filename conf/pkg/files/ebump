@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+
+import re
+import sys
+import glob
+import subprocess
+
+ebuilds = glob.glob("*.ebuild")
+
+if len(ebuilds) != 1:
+    print("Only works with single ebuild in PWD, aborting")
+    sys.exit(1)
+
+ebuild = ebuilds[0]
+
+m = re.match(r"(.+)-([\d\.]+)\.ebuild", ebuild)
+
+if not m:
+    print(f"Unable to parse {ebuild}")
+    sys.exit(1)
+
+name = m.group(1)
+ver = m.group(2)
+numbers = [int(i) for i in ver.split('.')]
+
+numbers[-1] = numbers[-1] + 1
+
+new_ver = ".".join([str(i) for i in numbers])
+
+subprocess.check_call(["git", "mv", ebuild, f"{name}-{new_ver}.ebuild"])

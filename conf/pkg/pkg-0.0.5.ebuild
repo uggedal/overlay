@@ -15,3 +15,9 @@ RDEPEND="
 	dev-util/pkgcheck
 	dev-util/shellcheck-bin
 "
+
+S="${WORKDIR}"
+
+src_install() {
+	dobin "${FILESDIR}"/ebump
+}
