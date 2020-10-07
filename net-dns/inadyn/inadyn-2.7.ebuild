@@ -31,7 +31,7 @@ RDEPEND="
 BDEPEND="virtual/pkgconfig"
 
 PATCHES=(
-	"${FILESDIR}/systemd-user.patch"
+	"${FILESDIR}/systemd-service.patch"
 )
 
 src_prepare() {
