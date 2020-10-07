@@ -24,8 +24,15 @@ DEPEND="
 	dev-libs/confuse
 	dev-libs/openssl
 "
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	acct-user/inadyn
+"
 BDEPEND="virtual/pkgconfig"
+
+PATCHES=(
+	"${FILESDIR}/systemd-user.patch"
+)
 
 src_prepare() {
 	default
