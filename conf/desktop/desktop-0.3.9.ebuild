@@ -33,6 +33,7 @@ RDEPEND="
 	laptop? (
 		dev-libs/light
 		gui-apps/kanshi
+		gui-apps/poweralertd
 	)
 	vncserver? ( gui-apps/wayvnc )
 	vncclient? ( gui-apps/wlvncc )
