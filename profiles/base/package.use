@@ -5,6 +5,7 @@ app-editors/vim -X
 app-misc/tmux vim-syntax
 app-shells/bash -net
 app-text/aspell l10n_en
+app-text/ghostscript-gpl cups
 app-text/hunspell l10n_en
 app-text/xmlto text
 dev-cpp/cairomm X
