@@ -34,6 +34,7 @@ RDEPEND="
 		dev-libs/light
 		gui-apps/kanshi
 		gui-apps/poweralertd
+		net-print/cups
 	)
 	vncserver? ( gui-apps/wayvnc )
 	vncclient? ( gui-apps/wlvncc )
