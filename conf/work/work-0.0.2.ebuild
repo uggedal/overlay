@@ -12,6 +12,7 @@ KEYWORDS="amd64"
 
 RDEPEND="
 	dev-python/pip
+	net-dns/ldns-utils
 "
 
 S="${WORKDIR}"
