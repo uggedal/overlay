@@ -28,4 +28,14 @@ src_install() {
 
 	dosym ../../../../lib/systemd/system/smartd.service \
 		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/smartd.service"
+
+	dosym ../../../../lib/systemd/system/zfs.target \
+		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/zfs.target"
+	dosym ../../../../lib/systemd/system/zfs-import.target \
+		"${EPREFIX}/etc/systemd/system/zfs.target.wants/zfs-import.target"
+
+	dosym ../../../../lib/systemd/system/zfs-mount.service \
+		"${EPREFIX}/etc/systemd/system/zfs.target.wants/zfs-mount.target"
+	dosym ../../../../lib/systemd/system/zfs-import-cache.service \
+		"${EPREFIX}/etc/systemd/system/zfs-import.target.wants/zfs-import-cache.target"
 }
