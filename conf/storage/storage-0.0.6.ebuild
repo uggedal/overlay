@@ -16,6 +16,8 @@ RDEPEND="
 	sys-apps/smartmontools
 	sys-fs/cryptsetup
 	sys-fs/mergerfs
+
+	sys-fs/zfs
 "
 
 S="${WORKDIR}"
