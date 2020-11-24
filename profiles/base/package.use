@@ -42,7 +42,6 @@ sys-apps/util-linux -cramfs
 sys-boot/grub -grub_platforms_pc -fonts -themes -truetype
 sys-fs/cryptsetup -luks1_default
 sys-fs/lvm2 device-mapper-only -thin
-sys-kernel/genkernel -firmware
 sys-kernel/gentoo-kernel savedconfig
 sys-process/psmisc -X
 virtual/ffmpeg -X -truetype
