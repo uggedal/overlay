@@ -38,4 +38,6 @@ src_install() {
 		"${EPREFIX}/etc/systemd/system/zfs.target.wants/zfs-mount.service"
 	dosym ../../../../lib/systemd/system/zfs-import-cache.service \
 		"${EPREFIX}/etc/systemd/system/zfs-import.target.wants/zfs-import-cache.target"
+
+	insinto /etc/systemd/system/zfs-mount.service.d doins "${FILESDIR}/load-key.conf"
 }
