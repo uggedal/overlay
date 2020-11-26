@@ -14,9 +14,6 @@ RDEPEND="
 	app-admin/hddtemp
 	sys-apps/hdparm
 	sys-apps/smartmontools
-	sys-fs/cryptsetup
-	sys-fs/mergerfs
-
 	sys-fs/zfs
 "
 
