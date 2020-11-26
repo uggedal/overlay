@@ -2,3 +2,5 @@ conf/desktop laptop vncclient
 conf/net wireless
 gui-apps/waybar rfkill
 media-libs/mesa -llvm
+sys-apps/systemd cryptsetup
+sys-fs/cryptsetup -luks1_default
