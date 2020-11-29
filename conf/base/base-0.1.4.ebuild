@@ -15,7 +15,6 @@ RDEPEND="
 	app-admin/needrestart
 	app-admin/ps_mem
 	app-portage/gentoolkit
-	app-portage/smart-live-rebuild
 	sys-process/htop
 "
 
