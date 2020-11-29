@@ -12,6 +12,7 @@ media-video/ffmpeg -X -opengl -truetype -fftools_aviocat -fftools_cws2fws -fftoo
 media-video/mpv libmpv -X -xv
 sys-apps/fwupd -systemd minimal nvme uefi
 sys-apps/systemd cryptsetup
+sys-boot/grub -truetype
 sys-fs/cryptsetup -luks1_default
 sys-fs/lvm2 device-mapper-only -thin
 virtual/ffmpeg -X -truetype
