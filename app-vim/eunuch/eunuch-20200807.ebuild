@@ -5,7 +5,7 @@ EAPI=7
 
 inherit vim-plugin vcs-snapshot
 
-REF="33e875b31c8b811a0a47908884a5e2339106bbe8"
+REF="4a4bf16b499dcde371c05c77ed4083c4b5228278"
 MY_PN="vim-${PN}"
 
 DESCRIPTION="vim plugin: helpers for UNIX"
