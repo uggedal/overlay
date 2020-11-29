@@ -2,7 +2,6 @@
 dev-libs/aml ~amd64
 dev-libs/date ~amd64
 dev-libs/light ~amd64
-dev-python/pypeg2 ~amd64
 gui-apps/gammastep ~amd64
 gui-apps/grim ~amd64
 gui-apps/kanshi ~amd64
@@ -13,4 +12,3 @@ gui-apps/wlvncc ~amd64
 gui-libs/gtk-layer-shell ~amd64
 gui-libs/neatvnc ~amd64
 media-gfx/imv ~amd64
-=net-irc/weechat-2.9 ~amd64
