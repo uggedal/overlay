@@ -5,7 +5,7 @@ EAPI=7
 
 inherit vim-plugin vcs-snapshot
 
-REF="f25a66c16f8b2a5d556d63b63980cc6d72bc4cfa"
+REF="e18d43fb95a296ae3a6e0b691579e39f47302aa9"
 MY_PN="vim-${PN}"
 
 DESCRIPTION="vim plugin: fuzzy picker for Neovim and Vim"
