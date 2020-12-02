@@ -22,7 +22,6 @@ RDEPEND="
 	gui-apps/grim
 	gui-apps/kanshi
 	gui-apps/mako
-	gui-apps/poweralertd
 	gui-apps/slurp
 	gui-apps/waybar
 	gui-apps/wl-clipboard
