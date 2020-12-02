@@ -38,7 +38,7 @@ src_install() {
 	dosym ../../../../lib/systemd/system/systemd-networkd.service \
 		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-networkd.service"
 
-	dosym ..//run/systemd/resolve/stub-resolv.conf \
+	dosym ../run/systemd/resolve/stub-resolv.conf \
 		"${EPREFIX}/etc/resolv.conf"
 	dosym ../../../../lib/systemd/system/systemd-resolved.service \
 		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-resolved.service"
