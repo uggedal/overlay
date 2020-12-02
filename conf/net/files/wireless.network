@@ -1,0 +1,6 @@
+[Match]
+Name=wlan*
+Type=wlan
+
+[Network]
+DHCP=ipv4

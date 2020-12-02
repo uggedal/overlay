@@ -22,16 +22,11 @@ src_install() {
 	if use wired; then
 		insinto /etc/systemd/network
 		doins "${FILESDIR}/wired.network"
-
-		dosym ../../../../lib/systemd/system/systemd-networkd.service \
-			"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-networkd.service"
 	fi
 
 	if use wireless; then
-		dosym ..//run/systemd/resolve/stub-resolv.conf \
-			"${EPREFIX}/etc/resolv.conf"
-		dosym ../../../../lib/systemd/system/systemd-resolved.service \
-			"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-resolved.service"
+		insinto /etc/systemd/network
+		doins "${FILESDIR}/wireless.network"
 
 		insinto /etc/iwd
 		newins "${FILESDIR}"/iwd.conf main.conf
@@ -39,4 +34,12 @@ src_install() {
 		dosym ../../../../lib/systemd/system/iwd.service \
 			"${EPREFIX}/etc/systemd/system/multi-user.target.wants/iwd.service"
 	fi
+
+	dosym ../../../../lib/systemd/system/systemd-networkd.service \
+		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-networkd.service"
+
+	dosym ..//run/systemd/resolve/stub-resolv.conf \
+		"${EPREFIX}/etc/resolv.conf"
+	dosym ../../../../lib/systemd/system/systemd-resolved.service \
+		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-resolved.service"
 }
