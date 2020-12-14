@@ -6,20 +6,6 @@ RUSTFLAGS="-C target-cpu=skylake"
 CPU_FLAGS_X86="aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt sse sse2 sse3 sse4_1 sse4_2 ssse3"
 
 USE="
-	cairo
-	dri
-	lcms
-	opengl
-	pango
-	pulseaudio
-	truetype
-	vulkan
-	wayland
-
-	png
-
-	vaapi
-
 	video_cards_intel
 	video_cards_i965
 	video_cards_iris
