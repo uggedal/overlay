@@ -30,7 +30,7 @@ RDEPEND="
 	x11-misc/xdg-utils
 	x11-libs/libnotify
 	x11-terms/alacritty
-	laptop ? (
+	laptop? (
 		dev-libs/light
 		gui-apps/kanshi
 	)
