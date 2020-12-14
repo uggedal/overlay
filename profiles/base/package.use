@@ -23,6 +23,6 @@ sys-apps/iproute2 -berkdb -iptables
 sys-apps/net-tools -arp
 sys-apps/systemd dns-over-tls policykit sysv-utils -gcrypt
 sys-apps/util-linux -cramfs
-sys-boot/grub -grub_platforms_pc -fonts -themes
+sys-boot/grub -grub_platforms_pc -fonts -themes -truetype
 sys-kernel/gentoo-kernel savedconfig
 sys-process/psmisc -X
