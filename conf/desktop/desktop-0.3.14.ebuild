@@ -11,16 +11,15 @@ HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"
 LICENSE="CC0-1.0"
 SLOT="0"
 KEYWORDS="amd64"
+IUSE="laptop"
 
 RDEPEND="
 	app-shells/fzy
 	dev-lang/rust-bin
-	dev-libs/light
 	media-fonts/dejavu
 	media-fonts/ibm-plex
 	media-gfx/imv
 	gui-apps/grim
-	gui-apps/kanshi
 	gui-apps/mako
 	gui-apps/slurp
 	gui-apps/waybar
@@ -31,6 +30,10 @@ RDEPEND="
 	x11-misc/xdg-utils
 	x11-libs/libnotify
 	x11-terms/alacritty
+	laptop ? (
+		dev-libs/light
+		gui-apps/kanshi
+	)
 "
 
 S="${WORKDIR}"
@@ -42,7 +45,10 @@ src_install() {
 
 	systemd_douserunit "${FILESDIR}/sway-session.target"
 	systemd_douserunit "${FILESDIR}/swayidle.service"
-	systemd_douserunit "${FILESDIR}/kanshi.service"
+
+	if use laptop; then
+		systemd_douserunit "${FILESDIR}/kanshi.service"
+	fi
 }
 
 pkg_postinst() {
