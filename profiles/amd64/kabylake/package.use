@@ -6,5 +6,6 @@ gui-apps/waybar network popups rfkill tray
 media-libs/mesa -llvm
 sys-apps/fwupd -systemd minimal nvme uefi
 sys-apps/systemd cryptsetup
+sys-boot/grub -truetype
 sys-fs/cryptsetup -luks1_default
 sys-fs/lvm2 device-mapper-only -thin
