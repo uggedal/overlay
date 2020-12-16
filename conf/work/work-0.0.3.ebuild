@@ -11,6 +11,7 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
+	app-editors/emacs
 	dev-python/pip
 	net-dns/ldns-utils
 "

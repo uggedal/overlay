@@ -1,6 +1,7 @@
 app-admin/logrotate -cron
 app-admin/sudo -sendmail
 app-crypt/gnupg -smartcard
+app-editors/emacs harfbuzz gtk gui
 app-editors/vim -X
 app-misc/tmux vim-syntax
 app-shells/bash -net
