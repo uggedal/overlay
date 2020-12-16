@@ -63,15 +63,17 @@ RDEPEND="app-emacs/emacs-common-gentoo[games?,gui(-)?]
 	systemd? ( sys-apps/systemd )
 	zlib? ( sys-libs/zlib )
 	gui? ( !aqua? (
-		x11-libs/libICE
-		x11-libs/libSM
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXfixes
-		x11-libs/libXinerama
-		x11-libs/libXrandr
-		x11-libs/libxcb
-		x11-misc/xbitmaps
+		!pgtk? (
+			x11-libs/libICE
+			x11-libs/libSM
+			x11-libs/libX11
+			x11-libs/libXext
+			x11-libs/libXfixes
+			x11-libs/libXinerama
+			x11-libs/libXrandr
+			x11-libs/libxcb
+			x11-misc/xbitmaps
+		)
 		gconf? ( >=gnome-base/gconf-2.26.2 )
 		gsettings? ( >=dev-libs/glib-2.28.6 )
 		gif? ( media-libs/giflib:0= )
@@ -99,7 +101,7 @@ RDEPEND="app-emacs/emacs-common-gentoo[games?,gui(-)?]
 				x11-libs/gtk+:3
 				xwidgets? (
 					net-libs/webkit-gtk:4=
-					x11-libs/libXcomposite
+					!pgtk? ( x11-libs/libXcomposite )
 				)
 			)
 		)
