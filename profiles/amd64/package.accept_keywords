@@ -1,6 +1,7 @@
 =app-admin/needrestart-3.5 ~amd64
 dev-libs/date ~amd64
 dev-libs/light ~amd64
+dev-vcs/git-crypt ~amd64
 gui-apps/gammastep ~amd64
 gui-apps/grim ~amd64
 gui-apps/kanshi ~amd64
