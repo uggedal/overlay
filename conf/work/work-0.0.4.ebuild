@@ -13,6 +13,7 @@ KEYWORDS="amd64"
 RDEPEND="
 	app-editors/emacs
 	dev-python/pip
+	dev-vcs/git-crypt
 	net-dns/ldns-utils
 "
 
