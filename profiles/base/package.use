@@ -1,7 +1,7 @@
 app-admin/logrotate -cron
 app-admin/sudo -sendmail
 app-crypt/gnupg -smartcard
-app-editors/emacs harfbuzz gtk gui pgtk -xpm
+app-editors/emacs harfbuzz gtk gui pgtk xft -xpm
 app-editors/vim -X
 app-emacs/emacs-common-gentoo gui
 app-misc/tmux vim-syntax
