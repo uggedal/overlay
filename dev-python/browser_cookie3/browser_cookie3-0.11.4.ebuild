@@ -14,3 +14,5 @@ SRC_URI="https://github.com/borisbabic/browser_cookie3/archive/${PV}.tar.gz -> $
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="amd64"
+
+RDEPEND="dev-python/lz4[${PYTHON_USEDEP}]"
