@@ -16,3 +16,5 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="dev-python/lz4[${PYTHON_USEDEP}]"
+
+PATCHES=( "${FILESDIR}/slim-deps.patch" )
