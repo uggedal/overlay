@@ -15,4 +15,7 @@ LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="amd64"
 
-RDEPEND="dev-python/lz4[${PYTHON_USEDEP}]"
+RDEPEND="
+	dev-python/lz4[${PYTHON_USEDEP}]
+	dev-python/pycryptodome[${PYTHON_USEDEP}]
+"
