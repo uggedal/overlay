@@ -5,11 +5,13 @@ EAPI=6
 
 PYTHON_COMPAT=( python3_{8,9} )
 
-inherit distutils-r1
+inherit distutils-r1 vcs-snapshot
+
+REF="8b045552526e83e6d592aaa8d64b115d7cc7bb54"
 
 DESCRIPTION="Python library for interacting with taskwarrior databases"
 HOMEPAGE="https://tasklib.readthedocs.io/"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="https://github.com/robgolding/${PN}/archive/${REF}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
