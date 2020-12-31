@@ -92,7 +92,7 @@ set display+=lastline
 set virtualedit+=block
 
 " Highlight the line of the cursor only in insert mode:
-augroup togglecursorline
+augroup ToggleCursorLine
 	autocmd!
 	autocmd InsertLeave * set nocursorline
 	autocmd InsertEnter * set cursorline
@@ -201,6 +201,8 @@ set nofoldenable
 
 " When it makes sence, remove a comment leader when joining lines:
 set formatoptions+=j
+" Automatically format paragraphs:
+set formatoptions+=a
 
 ""
 "" Languages
@@ -216,16 +218,23 @@ endfunction
 command! Spaces :call Spaces(4)
 
 " Setup different levels of space based indent for some syntaxes:
-au FileType python call Spaces(4)
-au FileType html call Spaces(4)
-au FileType jinja.html call Spaces(4)
-au FileType css call Spaces(4)
-au FileType yaml call Spaces(2)
-au FileType markdown call Spaces(4)
-au FileType vimwiki call Spaces(4)
+augroup SpacesOrTabs
+	autocmd !
+	autocmd FileType python call Spaces(4)
+	autocmd FileType html call Spaces(4)
+	autocmd FileType jinja.html call Spaces(4)
+	autocmd FileType css call Spaces(4)
+	autocmd FileType yaml call Spaces(2)
+	autocmd FileType markdown call Spaces(4)
+	autocmd FileType vimwiki call Spaces(4)
+augroup END
 
-" Mail messages should be broken to a limited width:
-au FileType mail setlocal textwidth=72
+" Mail/markdown should be broken to a limited width:
+augroup TextWidth
+	autocmd FileType mail setlocal textwidth=72
+	autocmd FileType markdown setlocal textwidth=72
+	autocmd FileType vimwiki setlocal textwidth=72
+augroup END
 
 
 ""
