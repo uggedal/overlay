@@ -304,7 +304,7 @@ let g:vimwiki_markdown_link_ext = 1
 
 " git sync commit leader binding:
 function GitCi()
-	!git ci -am sync && git push
+	!cd %:p:h && git add . && git ci -am sync && git push
 endfunction
 command! GitCi :call GitCi()
 nnoremap <leader>g :GitCi<CR>
