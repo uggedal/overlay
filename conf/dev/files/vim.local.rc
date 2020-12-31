@@ -165,7 +165,7 @@ set breakindent
 set autoindent
 
 " Highlight trailing space when not in insert mode:
-augroup highlighttrailing
+augroup HighlightTrailing
 	autocmd!
 	autocmd BufNewFile,BufRead * highlight trail_space ctermbg=1
 	autocmd InsertEnter * highlight trail_space ctermbg=NONE
@@ -219,7 +219,7 @@ command! Spaces :call Spaces(4)
 
 " Setup different levels of space based indent for some syntaxes:
 augroup SpacesOrTabs
-	autocmd !
+	autocmd!
 	autocmd FileType python call Spaces(4)
 	autocmd FileType html call Spaces(4)
 	autocmd FileType jinja.html call Spaces(4)
@@ -231,6 +231,7 @@ augroup END
 
 " Mail/markdown should be broken to a limited width:
 augroup TextWidth
+	autocmd!
 	autocmd FileType mail setlocal textwidth=72
 	autocmd FileType markdown setlocal textwidth=72
 	autocmd FileType vimwiki setlocal textwidth=72
