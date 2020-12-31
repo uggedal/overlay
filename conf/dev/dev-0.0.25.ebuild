@@ -20,7 +20,6 @@ RDEPEND="
 	app-vim/lastplace
 	app-vim/picker
 	app-vim/selenized
-	app-vim/taskwiki
 	dev-vcs/git
 	sys-apps/the_silver_searcher
 "
