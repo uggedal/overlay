@@ -201,8 +201,6 @@ set nofoldenable
 
 " When it makes sence, remove a comment leader when joining lines:
 set formatoptions+=j
-" Automatically format paragraphs:
-set formatoptions+=a
 
 ""
 "" Languages
@@ -220,21 +218,17 @@ command! Spaces :call Spaces(4)
 " Setup different levels of space based indent for some syntaxes:
 augroup SpacesOrTabs
 	autocmd!
-	autocmd FileType python call Spaces(4)
-	autocmd FileType html call Spaces(4)
-	autocmd FileType jinja.html call Spaces(4)
-	autocmd FileType css call Spaces(4)
+	autocmd FileType python,html,jinja.html,css,markdown,vimwiki
+				\ call Spaces(4)
 	autocmd FileType yaml call Spaces(2)
-	autocmd FileType markdown call Spaces(4)
-	autocmd FileType vimwiki call Spaces(4)
 augroup END
 
-" Mail/markdown should be broken to a limited width:
+" Mail/markdown should be broken to a limited width and paragraphs should be
+" automatically formatted:
 augroup TextWidth
 	autocmd!
-	autocmd FileType mail setlocal textwidth=72
-	autocmd FileType markdown setlocal textwidth=72
-	autocmd FileType vimwiki setlocal textwidth=72
+	autocmd FileType mail,markdown, vimwiki
+				\ setlocal textwidth=72 formatoptions+=a
 augroup END
 
 
