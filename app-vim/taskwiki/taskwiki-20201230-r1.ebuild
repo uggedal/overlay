@@ -20,6 +20,8 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
 	app-misc/task
+	app-vim/ansiesc
+	app-vim/taskwarrior
 	app-vim/vimwiki
 	$(python_gen_cond_dep 'dev-python/tasklib[${PYTHON_MULTI_USEDEP}]')
 	app-editors/vim[python,${PYTHON_SINGLE_USEDEP}]
