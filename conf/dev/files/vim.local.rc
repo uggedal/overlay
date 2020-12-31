@@ -227,7 +227,7 @@ augroup END
 " automatically formatted:
 augroup TextWidth
 	autocmd!
-	autocmd FileType mail,markdown, vimwiki
+	autocmd FileType mail,markdown,vimwiki
 				\ setlocal textwidth=72 formatoptions+=a
 augroup END
 
