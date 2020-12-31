@@ -308,3 +308,11 @@ function GitCi()
 endfunction
 command! GitCi :call GitCi()
 nnoremap <leader>g :GitCi<CR>
+
+""
+"" Additional local config
+""
+
+for file in split(globpath("/etc/vim/vim.local.d", '*.vim'), '\n')
+	execute 'source' fnameescape(file)
+endfor
