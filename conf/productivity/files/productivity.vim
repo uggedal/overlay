@@ -14,12 +14,5 @@ let g:vimwiki_list = [wiki_1]
 let g:vimwiki_ext2syntax = {'.md': 'markdown'}
 let g:vimwiki_markdown_link_ext = 1
 
-augroup vimwikitemplate
-	autocmd!
-	autocmd BufNewFile ~/src/notes/diary/*.md :silent 0r !vimwiki-diary-template '%'
-augroup END
-
 " taskwiki
-let g:taskwiki_extra_warriors={'W': {'data_location': '~/.task_work/',
-			\ 'taskrc_location': '~/.taskrc_work'} }
 let g:taskwiki_sort_order = 'status+,urgency+,end+,due+'
