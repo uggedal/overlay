@@ -6,7 +6,7 @@ import datetime
 
 template = """# {datestr}
 
-## Tasks | project:Work.Diary
+## Tasks | project:Diary #W
 
 ## 09:00 Meeting"""
 
