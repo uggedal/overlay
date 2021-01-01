@@ -1,4 +1,11 @@
 " vimwiki
+let wiki_2 = {}
+let wiki_2.path = '~/src/work/'
+let wiki_2.syntax = 'markdown'
+let wiki_2.ext = '.md'
+let wiki_2.index = 'README'
+add(g:vimwiki_list wiki_2)
+
 augroup vimwikitemplate
 	autocmd!
 	autocmd BufNewFile ~/src/work/diary/*.md :silent 0r !vimwiki-work-diary-template '%'
