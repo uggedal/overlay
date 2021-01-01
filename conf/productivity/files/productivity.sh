@@ -1,2 +1,2 @@
 alias t=task
-alias w='task rc.data.location=~/.taskrc_work'
+alias w='TASKRC=$HOME/.taskrc_work task'
