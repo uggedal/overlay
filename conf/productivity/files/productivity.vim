@@ -22,3 +22,4 @@ augroup END
 " taskwiki
 let g:taskwiki_extra_warriors={'W': {'data_location': '~/.task_work/',
 			\ 'taskrc_location': '~/.taskrc_work'} }
+let g:taskwiki_sort_order = 'status+,urgency+,end+,due+'
