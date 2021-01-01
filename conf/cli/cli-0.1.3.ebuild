@@ -29,7 +29,7 @@ src_install() {
 	doins "${FILESDIR}"/tmux.local.conf
 
 	dobin "${FILESDIR}"/irc
-	dobin "${FILESDIR}"/t
+	dobin "${FILESDIR}"/tm
 
 	insinto /etc/sudoers.d
 	doins "${FILESDIR}"/sudo-nopasswd
