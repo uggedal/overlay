@@ -30,6 +30,7 @@ src_install() {
 
 	dobin "${FILESDIR}"/irc
 	dobin "${FILESDIR}"/tm
+	dobin "${FILESDIR}"/termcolors
 
 	insinto /etc/sudoers.d
 	doins "${FILESDIR}"/sudo-nopasswd
