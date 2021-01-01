@@ -22,4 +22,7 @@ src_install() {
 	doins "${FILESDIR}"/productivity.vim
 
 	dobin "${FILESDIR}"/vimwiki-diary-template
+
+	insinto /etc/bash/bashrc.d
+	doins "${FILESDIR}"/productivity.sh
 }
