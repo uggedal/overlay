@@ -4,7 +4,7 @@ let wiki_2.path = '~/src/work/'
 let wiki_2.syntax = 'markdown'
 let wiki_2.ext = '.md'
 let wiki_2.index = 'README'
-add(g:vimwiki_list wiki_2)
+let g:vimwiki_list = add(g:vimwiki_list wiki_2)
 
 augroup vimwikitemplate
 	autocmd!
