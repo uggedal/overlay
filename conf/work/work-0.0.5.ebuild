@@ -12,9 +12,20 @@ KEYWORDS="amd64"
 
 RDEPEND="
 	app-editors/emacs
+	conf/productivity
 	dev-python/pip
 	dev-vcs/git-crypt
 	net-dns/ldns-utils
 "
 
 S="${WORKDIR}"
+
+src_install() {
+	insinto /etc/vim/vim.local.d
+	doins "${FILESDIR}"/work.vim
+
+	insinto /etc/bash/bashrc.d
+	doins "${FILESDIR}"/work.sh
+
+	dobin "${FILESDIR}"/vimwiki-work-diary-template
+}
