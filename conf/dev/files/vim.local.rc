@@ -223,12 +223,11 @@ augroup SpacesOrTabs
 	autocmd FileType yaml call Spaces(2)
 augroup END
 
-" Mail/markdown should be broken to a limited width and paragraphs should be
-" automatically formatted:
+" Mail/markdown should be broken to a limited width:
 augroup TextWidth
 	autocmd!
 	autocmd FileType mail,markdown,vimwiki
-				\ setlocal textwidth=72 formatoptions+=a
+				\ setlocal textwidth=72
 augroup END
 
 
