@@ -15,4 +15,4 @@ let g:vimwiki_ext2syntax = {'.md': 'markdown'}
 let g:vimwiki_markdown_link_ext = 1
 
 " taskwiki
-let g:taskwiki_sort_order = 'status+,urgency+,end+,due+'
+let g:taskwiki_sort_order = 'status+,end+,due+,project+'
