@@ -11,7 +11,6 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
-	app-editors/emacs
 	conf/productivity
 	dev-python/pip
 	dev-vcs/git-crypt
