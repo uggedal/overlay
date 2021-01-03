@@ -20,7 +20,4 @@ S="${WORKDIR}"
 src_install() {
 	insinto /etc/vim/vim.local.d
 	doins "${FILESDIR}"/productivity.vim
-
-	insinto /etc/bash/bashrc.d
-	doins "${FILESDIR}"/productivity.sh
 }
