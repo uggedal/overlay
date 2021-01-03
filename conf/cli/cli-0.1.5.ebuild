@@ -29,7 +29,7 @@ src_install() {
 	doins "${FILESDIR}"/tmux.local.conf
 
 	dobin "${FILESDIR}"/irc
-	dobin "${FILESDIR}"/tm
+	dobin "${FILESDIR}"/t
 	dobin "${FILESDIR}"/termcolors
 
 	insinto /etc/sudoers.d
