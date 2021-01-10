@@ -8,6 +8,7 @@ app-text/aspell l10n_en
 app-text/xmlto text
 dev-lang/python sqlite
 dev-libs/elfutils -utils
+dev-libs/libdbusmenu gtk3
 dev-libs/libpcre2 pcre16
 sys-libs/zlib minizip
 dev-python/pygobject -python_targets_python2_7

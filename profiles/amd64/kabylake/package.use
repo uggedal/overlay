@@ -1,6 +1,5 @@
 conf/desktop laptop
 conf/net wireless
-dev-libs/libdbusmenu gtk3
 dev-libs/libjcat pkcs7 gpg
 gui-apps/waybar wifi
 media-libs/mesa -llvm
