@@ -13,6 +13,7 @@ sys-libs/zlib minizip
 dev-python/pygobject -python_targets_python2_7
 dev-util/cmake -ncurses
 dev-vcs/git -webdav
+gui-apps/waybar network popups tray
 media-gfx/imagemagick -X
 net-misc/curl -ftp -imap -pop3 -smtp -tftp
 net-misc/iputils -arping
