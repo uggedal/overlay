@@ -1,7 +1,7 @@
 app-admin/logrotate -cron
 app-admin/sudo -sendmail
 app-crypt/gnupg -smartcard
-app-editors/vim -X python
+app-editors/vim -X python terminal
 app-misc/tmux vim-syntax
 app-shells/bash -net
 app-text/aspell l10n_en
