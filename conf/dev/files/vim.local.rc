@@ -237,7 +237,6 @@ augroup END
 let mapleader = ","
 
 " Convenience leader mappings for working with buffers:
-nnoremap <leader>b :ls<CR>
 nnoremap <leader>p :bp<CR>
 nnoremap <leader>n :bn<CR>
 nnoremap <leader>d :bd<CR>
@@ -290,8 +289,9 @@ let g:buftabline_numbers=1
 " buftabline indicator for modified buffers:
 let g:buftabline_indicators=1
 
-" vim-picker normal mode binding:
+" vim-picker normal mode bindings:
 nmap <unique> <c-p> <Plug>(PickerEdit)
+nmap <unique> <leader>b <Plug>(PickerBuffer)
 
 ""
 "" Functions
