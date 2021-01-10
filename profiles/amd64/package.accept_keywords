@@ -1,4 +1,5 @@
 =app-admin/needrestart-3.5 ~amd64
+=dev-libs/spdlog-1.8.0 ~amd64
 dev-libs/date ~amd64
 dev-libs/light ~amd64
 dev-vcs/git-crypt ~amd64
