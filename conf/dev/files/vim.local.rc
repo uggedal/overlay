@@ -291,7 +291,7 @@ let g:buftabline_numbers=1
 let g:buftabline_indicators=1
 
 " vim-picker normal mode binding:
-nmap <c-p> <Plug>PickerEdit
+nmap <unique> <c-p> <Plug>(PickerEdit)
 
 ""
 "" Functions
