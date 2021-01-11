@@ -230,6 +230,21 @@ augroup TextWidth
 				\ setlocal textwidth=72
 augroup END
 
+""
+"" Spell
+""
+
+set spelllang=en
+
+augroup Spell
+	autocmd!
+	autocmd FileType vimwiki
+				\ setlocal spelllang=en,nb
+	autocmd FileType gitcommit,mail,markdown,vimwiki
+				\ setlocal spell
+augroup END
+
+
 
 ""
 "" Leader
