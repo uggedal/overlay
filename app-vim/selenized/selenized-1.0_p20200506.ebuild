@@ -3,11 +3,13 @@
 
 EAPI=7
 
-inherit vim-plugin
+inherit vim-plugin vcs-snapshot
+
+REF="e93e0d9fb47c7485f18fa16f9bdb70c2ee7fb5db"
 
 DESCRIPTION="vim colorscheme fine-tuned for readability"
 HOMEPAGE="https://github.com/jan-warchol/selenized"
-SRC_URI="https://github.com/jan-warchol/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/jan-warchol/${PN}/archive/${REF}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
