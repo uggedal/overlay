@@ -223,11 +223,18 @@ augroup SpacesOrTabs
 	autocmd FileType yaml call Spaces(2)
 augroup END
 
-" Mail/markdown should be broken to a limited width:
+" Textfiles should be broken to a limited width:
 augroup TextWidth
 	autocmd!
 	autocmd FileType mail,markdown,vimwiki
 				\ setlocal textwidth=72
+augroup END
+
+" Textfiles should not have line numbering
+augroup NoNumber
+	autocmd!
+	autocmd FileType mail,markdown,vimwiki
+				\ setlocal nonumber
 augroup END
 
 ""
@@ -243,8 +250,6 @@ augroup Spell
 	autocmd FileType gitcommit,mail,markdown,vimwiki
 				\ setlocal spell
 augroup END
-
-
 
 ""
 "" Leader
