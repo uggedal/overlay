@@ -11,27 +11,10 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
-	conf/base
-
-	app-admin/sudo
-	app-editors/vim
-	app-misc/tmux
-	app-shells/bash-completion
-	sys-fs/ncdu
 "
 
 S="${WORKDIR}"
 
 src_install() {
-	doenvd "${FILESDIR}"/99editor
-
-	insinto /etc
-	doins "${FILESDIR}"/tmux.local.conf
-
 	dobin "${FILESDIR}"/irc
-	dobin "${FILESDIR}"/t
-	dobin "${FILESDIR}"/termcolors
-
-	insinto /etc/sudoers.d
-	doins "${FILESDIR}"/sudo-nopasswd
 }
