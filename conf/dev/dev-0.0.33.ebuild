@@ -11,9 +11,6 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
-	app-shells/fzy
-	app-vim/commentary
 	app-vim/easydir
 	app-vim/eunuch
-	app-vim/picker
 "
