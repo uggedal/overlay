@@ -11,13 +11,10 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
-	app-admin/logrotate
 "
 
 S="${WORKDIR}"
 
-src_install() {
-	doins "${FILESDIR}"/logrotate.conf
 
 	dosym ../../../../lib/systemd/system/systemd-timesyncd.service \
 		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-timesyncd.service"
