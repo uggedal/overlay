@@ -27,10 +27,6 @@ S="${WORKDIR}"
 
 src_install() {
 	doenvd "${FILESDIR}"/99local-desktop
-
-	if use laptop; then
-		systemd_douserunit "${FILESDIR}/kanshi.service"
-	fi
 }
 
 pkg_postinst() {

@@ -11,17 +11,5 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
-	conf/productivity
 	dev-python/pip
-	dev-vcs/git-crypt
-	net-dns/ldns-utils
 "
-
-S="${WORKDIR}"
-
-src_install() {
-	insinto /etc/vim/vim.local.d
-	doins "${FILESDIR}"/work.vim
-
-	dobin "${FILESDIR}"/vimwiki-work-diary-template
-}
