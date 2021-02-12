@@ -24,17 +24,6 @@ src_install() {
 		doins "${FILESDIR}/wired.network"
 	fi
 
-	if use wireless; then
-		insinto /etc/systemd/network
-		doins "${FILESDIR}/wireless.network"
-
-		insinto /etc/iwd
-		newins "${FILESDIR}"/iwd.conf main.conf
-
-		dosym ../../../../lib/systemd/system/iwd.service \
-			"${EPREFIX}/etc/systemd/system/multi-user.target.wants/iwd.service"
-	fi
-
 	dosym ../../../../lib/systemd/system/systemd-networkd.service \
 		"${EPREFIX}/etc/systemd/system/multi-user.target.wants/systemd-networkd.service"
 
