@@ -1,2 +1,0 @@
-# Force wayland for QT applications (qutebrowser):
-QT_QPA_PLATFORM=wayland

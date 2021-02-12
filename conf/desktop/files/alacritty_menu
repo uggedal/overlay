@@ -1,8 +1,0 @@
-#!/bin/sh
-
-exec alacritty \
-	--class AlacrittyMenu \
-	-d 40 11 \
-	-e /bin/bash -c '
-		compgen -c | sort -u | fzy | xargs -r swaymsg -t command exec
-	'
